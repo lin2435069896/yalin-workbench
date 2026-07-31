@@ -7,6 +7,7 @@
       "docNo": "金规〔2025〕9号",
       "publishDate": "2025-04-03",
       "effectiveDate": "2025-10-01",
+      "timeRange": "half_year",
       "issuer": "国家金融监督管理总局",
       "summary": "首次对'何为助贷'在规范性文件层面作出定义，明确互联网助贷属于互联网贷款，应严格遵守相关监管规章制度。",
       "keyPoints": [
@@ -26,6 +27,7 @@
       "docNo": "金规〔2024〕8号",
       "publishDate": "2024-12-31",
       "effectiveDate": "2024-12-31",
+      "timeRange": "half_year",
       "issuer": "国家金融监督管理总局",
       "summary": "规范小额贷款公司经营行为，加强监督管理，促进小额贷款公司规范健康发展。",
       "keyPoints": [
@@ -43,6 +45,7 @@
       "docNo": "平台规范",
       "publishDate": "2025-12-16",
       "effectiveDate": "2025-12-16",
+      "timeRange": "one_month",
       "issuer": "抖音平台",
       "summary": "规范抖音社区内财经内容传播行为，倡导财经领域创作者完成平台财经专业资质认证。",
       "keyPoints": [
@@ -60,6 +63,7 @@
       "docNo": "行业新规",
       "publishDate": "2026-04-25",
       "effectiveDate": "2026-04-25",
+      "timeRange": "half_month",
       "issuer": "国家金融监督管理总局",
       "summary": "针对3.5万亿助贷行业的金融营销新规，进一步规范营销宣传行为，影响众多贷款居间人的直播和短视频创作。",
       "keyPoints": [
