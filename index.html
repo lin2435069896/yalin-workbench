@@ -734,7 +734,7 @@
     }
 
     function renderRegulations(){
-      document.getElementById('regulationList').innerHTML=regulations.map(r=>`
+      document.getElementById('regulationList').innerHTML=regulations.filter(r=>r.keyPoints).map(r=>`
         <div class="reg-card">
           <div style="display:flex;justify-content:space-between;align-items:start;gap:8px;margin-bottom:8px">
             <div class="reg-title" style="flex:1">${escapeHtml(r.title)}</div>
@@ -748,7 +748,7 @@
         </div>`).join('');
       const planList=document.getElementById('publishPlanList');
       let plans=[];
-      for(const r of regulations){if(r.publishPlan){plans=r.publishPlan;break}}
+      for(const r of regulations){if(r.publishPlan&&Array.isArray(r.publishPlan)){plans=r.publishPlan;break}}
       if(plans.length>0){
         planList.innerHTML=plans.map(p=>`
           <div class="plan-phase">
