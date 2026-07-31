@@ -1,0 +1,287 @@
+{
+  "updateTime": "2026-07-31 15:10",
+  "platforms": [
+    {
+      "platform": "抖音",
+      "icon": "🎵",
+      "color": "#000000",
+      "bgColor": "rgba(0,0,0,0.05)",
+      "hotspots": [
+        {
+          "title": "月薪3000如何理财？3步搞定个人财务规划",
+          "author": "理财小课堂",
+          "likes": "52.3w",
+          "category": "理财科普",
+          "publishTime": "2026-07-28",
+          "timeRange": "half_month",
+          "hotAngle": "月薪3000人群的理财需求被忽视，切入点是'小额也能理财'",
+          "recreateIdea": "从助贷角度切入：'月薪3000也能养好征信，未来贷款更容易'，用理财+征信双视角"
+        },
+        {
+          "title": "征信花了怎么办？5步修复全攻略",
+          "author": "金融老炮儿说",
+          "likes": "38.7w",
+          "category": "征信修复",
+          "publishTime": "2026-07-25",
+          "timeRange": "half_month",
+          "hotAngle": "征信修复需求大，但信息碎片化，合集类内容传播广",
+          "recreateIdea": "做成'征信修复日记'系列，每期1步，结尾引导关注看下一步"
+        },
+        {
+          "title": "2026下半年搞钱方向：3个被低估的行业",
+          "author": "商业观察室",
+          "likes": "45.6w",
+          "category": "行业趋势",
+          "publishTime": "2026-07-22",
+          "timeRange": "half_month",
+          "hotAngle": "搞钱话题永远有热度，'被低估'制造好奇心",
+          "recreateIdea": "助贷行业作为'被低估行业'之一做解读，建立行业权威感"
+        },
+        {
+          "title": "贷款中介的一天Vlog：真实的助贷人",
+          "author": "助贷阿强",
+          "likes": "28.9w",
+          "category": "行业日常",
+          "publishTime": "2026-07-18",
+          "timeRange": "one_month",
+          "hotAngle": "行业揭秘类内容自带流量，真实感比专业感更吸引人",
+          "recreateIdea": "直接借鉴！做'助贷女中介的一天'，差异化用女性视角"
+        },
+        {
+          "title": "银行降息潮来了！普通人要不要转贷？",
+          "author": "断电成金",
+          "likes": "33.2w",
+          "category": "利率政策",
+          "publishTime": "2026-07-15",
+          "timeRange": "one_month",
+          "hotAngle": "降息是全民话题，转贷建议有实操价值",
+          "recreateIdea": "做'降息后你的贷款能省多少'计算器类内容，可视化数字"
+        },
+        {
+          "title": "小微企业贷款被拒5大原因，第3个最容易被忽略",
+          "author": "老徐企服说",
+          "likes": "22.4w",
+          "category": "企业融资",
+          "publishTime": "2026-06-28",
+          "timeRange": "one_month",
+          "hotAngle": "'第3个最容易被忽略'制造悬念，合集类内容完播率高",
+          "recreateIdea": "做成系列，每期讲1个原因，用真实案例脱敏演绎"
+        },
+        {
+          "title": "助贷新规后这3种业务不能做了！赶紧自查",
+          "author": "樊振中",
+          "likes": "41.5w",
+          "category": "助贷新规",
+          "publishTime": "2026-06-20",
+          "timeRange": "one_month",
+          "hotAngle": "新规解读+合规警示，从业者刚需内容",
+          "recreateIdea": "从'我自查后的调整方案'角度做实操版解读"
+        },
+        {
+          "title": "朋友圈发什么客户主动找你？这套模板直接抄",
+          "author": "大威朋友圈",
+          "likes": "35.8w",
+          "category": "朋友圈营销",
+          "publishTime": "2026-06-15",
+          "timeRange": "one_month",
+          "hotAngle": "'直接抄'降低门槛，模板类内容收藏率高",
+          "recreateIdea": "做'助贷女中介朋友圈7天模板'，每天1条可直接复制"
+        }
+      ]
+    },
+    {
+      "platform": "小红书",
+      "icon": "📕",
+      "color": "#FF2442",
+      "bgColor": "rgba(255,36,66,0.06)",
+      "hotspots": [
+        {
+          "title": "女生搞钱必看｜5个副业每月多赚3000+",
+          "author": "搞钱女孩",
+          "likes": "12.6w",
+          "category": "女性搞钱",
+          "publishTime": "2026-07-27",
+          "timeRange": "half_month",
+          "hotAngle": "女性向+搞钱+具体数字，小红书爆款公式",
+          "recreateIdea": "做'助贷女中介副业指南'，展示专业知识变现的多种路径"
+        },
+        {
+          "title": "征信报告解读｜这5个地方影响你的贷款",
+          "author": "金融小百科",
+          "likes": "8.9w",
+          "category": "征信解读",
+          "publishTime": "2026-07-24",
+          "timeRange": "half_month",
+          "hotAngle": "图文详解征信报告，小红书用户偏好干货合集",
+          "recreateIdea": "做图文版'一分钟看懂征信报告'，每页讲1个要点"
+        },
+        {
+          "title": "房贷转贷值不值？我算了一笔账",
+          "author": "理财师小王",
+          "likes": "15.3w",
+          "category": "房贷转贷",
+          "publishTime": "2026-07-20",
+          "timeRange": "one_month",
+          "hotAngle": "算账类内容+真实数字，信任度高",
+          "recreateIdea": "做'助贷中介帮你算转贷账'系列，用真实案例展示专业度"
+        },
+        {
+          "title": "小微企业主必看｜2026融资渠道合集",
+          "author": "企服老徐",
+          "likes": "6.7w",
+          "category": "企业融资",
+          "publishTime": "2026-07-10",
+          "timeRange": "one_month",
+          "hotAngle": "合集类内容在小红书收藏率高，企业主刚需",
+          "recreateIdea": "做图文版'助贷中介融资渠道地图'，可视化展示"
+        },
+        {
+          "title": "贷款被拒怎么办？3步自救指南",
+          "author": "金融老炮儿",
+          "likes": "9.8w",
+          "category": "贷款被拒",
+          "publishTime": "2026-06-25",
+          "timeRange": "one_month",
+          "hotAngle": "痛点问题+自救指南，情绪共鸣强",
+          "recreateIdea": "做'被拒后助贷中介帮你怎么办'系列，展示服务价值"
+        },
+        {
+          "title": "女生做金融居间是什么体验？",
+          "author": "助贷小姐姐",
+          "likes": "11.2w",
+          "category": "行业揭秘",
+          "publishTime": "2026-06-18",
+          "timeRange": "one_month",
+          "hotAngle": "女性视角+行业揭秘，小红书用户偏好真实感",
+          "recreateIdea": "直接做'助贷女中介日常'系列，真实+专业双视角"
+        }
+      ]
+    },
+    {
+      "platform": "视频号",
+      "icon": "📺",
+      "color": "#07C160",
+      "bgColor": "rgba(7,193,96,0.06)",
+      "hotspots": [
+        {
+          "title": "2026年普通人最大的机会：私域+内容",
+          "author": "商业老炮",
+          "likes": "18.5w",
+          "category": "商业趋势",
+          "publishTime": "2026-07-26",
+          "timeRange": "half_month",
+          "hotAngle": "视频号用户偏中年，私域+内容话题契合度高",
+          "recreateIdea": "从助贷角度切入：'助贷+私域+内容'是2026最佳组合"
+        },
+        {
+          "title": "企业老板必看：贷款前必须准备的5份材料",
+          "author": "老徐企服说",
+          "likes": "14.2w",
+          "category": "企业融资",
+          "publishTime": "2026-07-22",
+          "timeRange": "half_month",
+          "hotAngle": "老板向+实操清单，视频号用户偏好实用内容",
+          "recreateIdea": "做'助贷中介帮你准备贷款材料'系列，展示服务专业度"
+        },
+        {
+          "title": "金融居间人怎么获客？2026最新打法",
+          "author": "大威朋友圈",
+          "likes": "22.7w",
+          "category": "助贷获客",
+          "publishTime": "2026-07-18",
+          "timeRange": "one_month",
+          "hotAngle": "行业获客方法，视频号居间人用户多",
+          "recreateIdea": "做'女中介获客日记'系列，分享真实获客经历"
+        },
+        {
+          "title": "降息周期下，你的贷款怎么选？",
+          "author": "断电成金",
+          "likes": "16.8w",
+          "category": "利率政策",
+          "publishTime": "2026-07-12",
+          "timeRange": "one_month",
+          "hotAngle": "降息话题+实操建议，视频号用户关注理财",
+          "recreateIdea": "做'助降息后怎么选贷款'图文版，对比计算"
+        },
+        {
+          "title": "助贷新规深度解读：从业者何去何从",
+          "author": "樊振中",
+          "likes": "25.6w",
+          "category": "助贷新规",
+          "publishTime": "2026-06-22",
+          "timeRange": "one_month",
+          "hotAngle": "新规解读+从业者视角，视频号用户偏行业人",
+          "recreateIdea": "做'新规后我的调整方案'，展示个人专业判断"
+        },
+        {
+          "title": "朋友圈运营SOP：每天3条，客户主动找你",
+          "author": "大威朋友圈",
+          "likes": "19.3w",
+          "category": "朋友圈营销",
+          "publishTime": "2026-06-15",
+          "timeRange": "one_month",
+          "hotAngle": "SOP类内容+每天3条具体执行，视频号用户偏好方法论",
+          "recreateIdea": "做'助贷女中介朋友圈7天SOP'，每天1条模板"
+        }
+      ]
+    },
+    {
+      "platform": "B站",
+      "icon": "🎬",
+      "color": "#00A1D6",
+      "bgColor": "rgba(0,161,214,0.06)",
+      "hotspots": [
+        {
+          "title": "深度解析｜3.5万亿助贷行业怎么赚钱",
+          "author": "财经阿伟",
+          "likes": "32.5w",
+          "category": "行业分析",
+          "publishTime": "2026-07-25",
+          "timeRange": "half_month",
+          "hotAngle": "B站用户偏好深度内容，3.5万亿数字制造好奇",
+          "recreateIdea": "做'助贷行业赚钱逻辑深度解析'10分钟长视频"
+        },
+        {
+          "title": "金融居间人是什么职业？10分钟讲清楚",
+          "author": "商业揭秘",
+          "likes": "28.9w",
+          "category": "职业揭秘",
+          "publishTime": "2026-07-20",
+          "timeRange": "half_month",
+          "hotAngle": "职业揭秘类+B站偏好长视频",
+          "recreateIdea": "做'助贷女中介职业揭秘'，展示行业真实日常"
+        },
+        {
+          "title": "征信报告详解｜每个字段都讲清楚",
+          "author": "金融科普",
+          "likes": "22.7w",
+          "category": "征信科普",
+          "publishTime": "2026-07-10",
+          "timeRange": "one_month",
+          "hotAngle": "B站偏好详细科普，征信是刚需话题",
+          "recreateIdea": "做'助贷中介教你看征信'20分钟长视频"
+        },
+        {
+          "title": "贷款中介是骗局吗？从业者说真话",
+          "author": "行业真相",
+          "likes": "35.6w",
+          "category": "行业揭秘",
+          "publishTime": "2026-06-25",
+          "timeRange": "one_month",
+          "hotAngle": "争议性话题+从业者视角，B站偏好争议内容",
+          "recreateIdea": "做'助贷女中介说行业真相'，用真实经历破除偏见"
+        },
+        {
+          "title": "2026金融行业大变局｜助贷新规影响普通人",
+          "author": "财经观察",
+          "likes": "26.8w",
+          "category": "行业变局",
+          "publishTime": "2026-06-18",
+          "timeRange": "one_month",
+          "hotAngle": "大变局+影响普通人，B站偏好宏大叙事",
+          "recreateIdea": "做'助贷新规对普通人贷款的影响'深度解读"
+        }
+      ]
+    }
+  ]
+}
