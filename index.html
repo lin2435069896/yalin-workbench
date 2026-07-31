@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="雅林的小日子">
+  <meta name="theme-color" content="#FFE0B2">
+  <meta name="description" content="雅林的每日小日子 - 轻松管理任务、灵感、爆款、复盘">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAW90lEQVR4nO2deVxUVf/Hv3cWZtgRQgQZwUDEJcENckMNC5XULE1Lze0pcwFTLK2eHjXLstUNU3+WPqlpZW6R4s/qeTItt0LNlMWQVQfZt2FgZpjnDxq9IAx3m7lz7/2+X6/v62W3e+75cr/fc8/nnHvOHWL0gNvAM2a+HUB4heCzcgUP+YcJj5BpmQ92bRAKO9WGSY9QhZwrNk9PBWHbKjDxETZY8sdmWaogbJOjmPgIl9isIXAtgTDxEVvCeUPgSgJh4iP2hLOGwIUEwuRH+MIMLBsBWwmEyY/wDatGwFQCYeIjjgRjScREAmHyI44K7d6ArgTC5EccHVqNgI4EwuRHhALlRkBVAmHyI0KDUiOw9VIIBHFoqIwB8OmPCJV2e4H2JBAmPyJ0rDYCaxIIkx8RC202ApmdHUEQh6ItCYRPf0RstNoL4CwQImlamwXCpz8iVu7rBWy1IwxBBEFLCYStARE7zXoBe30VAkEcErIEwqc/IhXu9gI4C4RIGpRAiKRREIQZAOUPIj3MAEBgD4BIGmwAiKSxSCAEkSQKAvU/Il3MKIEQSYMSCJE0uCEGkTQogRBJgxIIkTTYAyCSBhfDIZIGd4QhkgYlECJpUAIhkgYlECJpUAIhkgYlECJpUAIhkgYlECJpUAIhkgYlECJpUAKRcPGQQ8wkH8rn/7ivBBrqGm3oUdt06ekMPR92p3z+mcNlUF1mtKFHwgQlEAkXNzmMmEq9AZw5XAYGPT8NILCbmpavV36qgppybAAtQQnUDHr3ggAzCOX+CclXe6Kg98PyIofmvfgle9vnZSVVdQAAg0PmPeckd3G2hVtccCFvz4EbWfmlAAADgqZPclP5Uu8+RAyOAUjQvRcX8/Z+U1RUVAYAEBX83GSVHRsAXV+vFB787vLNyzcAAHr5j411xwYAACiBmsHmXthfYrCpC+WQBRwEk2BzLwiCXXkm9bEpi3FvAiUQCTb3gmBZnkl9bMpi3JtACURCKhIIZ4TugRKIBCtZwbI8k/oYl0UJdBeUQBwipHspJF9tCUogEkKSQOzGACiBLKAEIiGomRUByTVHBiUQCSHNrAjJV0cGewASQuoBhOSrI4NjABJCGgPgm2BuQAlEQkiyQki+OjIogchIRFYIyVdbgxKIhJAkEPseAOMOgBKoGUKSFULy1ZHBDTFcgS1AkBDvjUsTVV8YMdoHHlug4duNVim4Vgv7VmQBAEBQhDs8vSaEZ4/o8e/FGXDnZh3fbnCK6CSQI/89YnjwCt3/luAskJ2x3G8h3ncxzh6JbhbIkeNzsyztyrKjwxYCAEyTvTB5MmxL5NsnOnz03ymzL19u2lecNGL/zgCPsFC+fWILSiCEEWKQcwBilEAC+XuEft/FsqJUhBJIXH+P4yKO9UTYAyCMEMuAGMcACCPEMwYQQTdGRihBEYqfbSGWbZWik0ANdSaovF0PAAB1xpramvrycirlNBqNn0qlUtKpKycnR2s0Gil/crmwsLDY8m+9vt5g8bPBpK+v1BcXt1mQhIuLizogIOABOn6SKS8vry4tLa1kUrahocFg+TdKIAflxs9lcOPnMgAAOH3z4Pf7Lq39oL0yarXaqbi4OIVuA3j44YfnWb4NSpffz1/O3rvwKgAAZBSfv7rx9IKXqJR7/fXXn3vrrbeeZ1InAMCFCxeux8XFJTEtb0EsEkhm6crEaFR3TcXHxw9yc3Oj/WHbiIgIVi+C7vlKnenTpz/Gps7Y2NgBnTp18mZzDQt8x5cLE50EIuOsdHX1ddMEtnfec9NmP87k+gcPHnx79OjRSadPn77i4+LfSSZTKKiW7eDs62u5905ylYqKn5H9+jwYHh4exMRXC3K5XDZlypTYDRs2fO2i9HB3VXl6MrmOUq5QiiF3iK1PXhD+SIYFCpUMZu6MBIVKxqh8VVVV7ciRIxOn+r/zvofKm5Mna1sMnqOBh+L9WF/nwoUL16Oiol7o6fdwVOKQTR9y4JpgEbUEomLBAz0ZJz8AgIeHh2tqauqHBo/iAlv6KZcDhA7lpn0NHDiwR1hYmCb9zvmL1fqSMr5jwKfJLKN5qVrIEPZJ5evr6zX9nWF+xUTmdVv5GRzlBc6etMboVnn22WcfbTQ3Nl4sPPkD3zHg05g/+kSAk7McNH0ZSeD76BLUxW/CqkjnO4a/bnBywRb0GsNe+pCZNm3aowAA5/JST3J6YYEhaQkUFOUFciV3z4DevXsFD1+m0Zfo8/K59NO7ixr8e1H/SVQqhIaGBkZFRfXIKb92/U5NLqf+CskkLYG4kD8tGTpsSO/wWYr8yvqSEq785Prpb2HatGmPAQCczz9xku9Y8GUyAgCkaB5+Kgjs68U6iVpj4qQJg93jbl/QG2pq2fqpcpVDaAzjF79WmTJlyiMKhUJ+Ni/1JN/x4MtkBGEGKVqveD8gCC7SqHVeWDR3TFn4+WMmc4OBjZ+9H+/EapbKGn5+ft6TJ08eeaemoCCn/M/rfMeED5NkD6BykUO3kb6cJJE1Xnv75acyPE4cADCbmfjp7K6AXvGdbOpjUlLSVACAs3mp/893XPgwSTaAsNiOoFTLwdbI5XLZ6k0rJqYZU75m4udDTwSA0tm2fvbv3797TExMxLn8739sNJtMfMfG3iY5CSRTAPQYa9unKhlXV1f1q8kLY9NqTh6n46ertxLCR9tm8NuSpKSkqVX6srKLBT/8h+/42D0f+G6B9rbgaG9w9XHiJnMo4u/v7zPn3fFh1yvOn6XqZ5+nOnM6RWuNcePGDQkLC9Mcz/hiP9/xsbdJrgH0jPcHrjCbzZTXUfXp0yckZnEYkVuRkdGej+5+Kgh9pCNnfrYHQRDESy+99HROeXpGRvGly3zHyL4NwAG6IXtZx+5u4BPqxlHaAGzbtu0InfPHjB0d7f24LqOsTnvHmp8RkwNBJic485MKs2bNGuPj4+N5PPOL/XzHCSWQjazn+ACO0qWJtWvX7v7jjz+y6ZRZkDB/fG7gr0frjTpdaz56BbpA8FDbz1C1xNnZWTV//vwn0gpPn9FW5+XzHSv79QAO4IQ97IFQNwgcwO2b34aGBuOcOXPeMZlMjXTK1ctqqzf/+q9VYG5sbOlnxBQN2PL9hDUWLVr0pJPKSZGa+dVXfMfLfg3AAbohe1jkNFb7SNrk4sWL6R999NGXVM9PSUn5JTk5+WDarV9+3Xt5UzLZxwe6uUHgQJtuKbCKn5+f9+zZs+NP3fzueG1DRSXfMUMJxJEFRHaAjj082k0Ao9Foop4u91i5cuWnlbdq2i2r1WrL5syZ847lv49lfPnVqZvHjxMAIJMTMPAfD1Ku0/KNTqrU1tbqqZz3xhtvzJQ7yeDkjUOH+Y6bnXoAADGbTE5An6ldKCXJoUOHTlE6sQV1dXX1p7ZcqQUrc0Jms9k8a9ast4uLiyvIx+tNujqCAAiPDwCvIFdK9RUUFBR//vnnqXR8/Prrr/9D5byAgIAHEhISnjqR9c1Bo9lg4Dt+dlgMZwYxW+ijfpQSy2QyNW7duvUwnaQiU3St1Jj9o7bN///xxx9/deLEifPkY/07Dx48utuTT7p1VEGvp6j/qMe6dev21tfXG9o/8x579uw5Qf6siTVWrFgxnVA3NvyUnfId3/Gz+XJoOjdRaKg9ldB7MjXtn5KS8ktubm4Rm/r++DIX6qsN9/UDly5dynr11Ve3kY95qb2950e/9ioAQP9/hIDciVootFpt2Y4dO76l61tJSUnlkSNHTlM5t0OHDu7Lly+fduDqrn83mOrr6dYlJEQtgSKmdQWlC7W1NMnJyQfZ3EiCADDUGuHql7kE+bhOp9M/88wzq5t9VAoIYuGg11/3VHt5hYzqBH69vSjX88EHH+zT6/UNTHz89NNPU6ieu2TJkik+nb3UqZkHvuE7jiiBGJhfb0/oQnE+PTMzM//777+/yCSp7tFUb85/tVCeXUNOpE3p6em55DMfD3/66b7+UVEenZ0hYnpXyjWUlpZWspFpJ0+evJifn3+HyrkqlUq5YcOGxEPX9uzRNVTX8B1Pm0kgAgDEZk4uChgwrxvlxNiyZcshOssaWuNu/WaAq/tzAAAg5eh3Z7dv336UfF7XDt26TY+cN0+ulEH0ou6UpQ9A0ziC6mxOazQ2Njbu2rXrGNXzx44dOyh29MiIw9f27uU7prYyUUqgvnNCwNlbRSnIFRUVNTt37qScFG1Brr/kWgXk/lQEp5J/qyKfo1Ko1UuHrlyplCuVDz0TDJ5dqM36ADR903Pz5s3fsPVzx44dKY2mRsqNff369Yk/5B49rK0pKOA7riiBKJhm0AMQOIj6UoKNGzceqKqqqmWUTSSanij3/Ej7v0wY5Dvi0VCf8HDLOXP6L0oI9OgS1HmgD4TE0VuWsWrVqs8qKyvv+qlWqGl/yhEAIC8vryjrTC7lv7dr167+b7795pzPLm7YyHdsUQK1Y56BrhA5l7r0qa6u1m3YsOFrygWs0Jo/MiCI5yJfnA8AEK0ZNiwudPx4ryBX6P9iGK1rp6en527ZsuUQ+dhDfv36MvU17dBVSl/MtpCYmDjJPUytv1Bw5jTfMebaRPNtUCc3JUQn9QQFjZ1eycnJB8vKyu7KFGeliwvT+i1daksi/Pv1GxUSHz+r3/z5ak8lRC/tBXIVvV1eS5Ys2UR+S+3m5O7e2y+ScQMoyiqpL82oBJ/u1L6JRBAEsXPnztdGDXpsed+AAQOd5Cpq+lIAiEICyQgzDEgIBxdfNeU/XKfT6Vuu4Yl9cPQYpjfSmn+Jg15Z4eXq4TlwcU9w9qGXOykpKb+kpqaeIx97ps/sOU5yJ8a7eggwQ/bxAlplgoODO73x7utTP0/bto3veKMEamHAYP5m69atR8jLEpyVLi6xIWwaQNsmkxHQb34P8A5rfz0SGYPBYExKStpMPhbo0SUovvsTE9l03AQA3Pm9FGqL6miVmzlz5pjAEb6Gq0WX0viOOVcmmlmgP3ffALOJWkuoqqqqfe+9974gH3u8+8Qn3ZzcGe+WaXOWQQYQOa87+EfR/7bPxo0bD2RmZuaTjz0/MCFBIZPLgUULsEi17O/o9QIAAOs3rE88Yzp5QG/U6fiOOc4Ckay2sBZyThZSCuLq1at3kn/ZRaVQqyf2mDyFYNKV/E2rfhFmeGh2N+g8mP72Rq1WW7ZmzZpd5GNRgYMGDwgYGG25PnNfm/wt+Pk26Gj2Ak5OTsotO5MTd1xK3sR3zLmRQA7QCrmyv47mgqHW+k92ZWRk5G3atKnZfPrYsPETvJy9vCxPRia05k9AtC9oRjDbgzx37tx3ydOeCplC8fyABYvI12fu7N/lG82QeTCHVtGKioqauXPnvnsiPSXleNbRw3zHnIMewPJEEL4Za43w17e5VgO4ePHiDQaD4W4rcVG6uk7u/cyzlmuwoaU/RRdLoCqnmvZ1Pvnkk8PHjh37lXxsQvhTkwI9NBqu/dSeuwPVeTXtlGji5s2bt6Ojo1+wLBvZen7TxvTiP6/yHXc2JhoJZLH8k4WgL219tcCRI0dOt1ySPD1i5mxvtZc3e1lxvy9gaoQrn1wHUwP1fTaZmZn5y5YtSyYf6+Ds7f1snxmzml+fOc2uYzZD1oGblPyKiYlZSB6TGBsNhndPrV5lajQY+I47SqC/zWxqhJspefcFUKfT6ZcuXbqJfCzQU9NlQo+JT3EhKwho3R9dkQ6yvqK2b95oNJpmzJixRqfTNWvBSwe/ssJN5erKifxpxdeSK6VQkVnZ5vnXrl3LGT58+KKCgoJmP+Xq5uTmtnTIKyssvxcmRBOVBLLYrZ+1oC9rvow9ISFhfXZ29i3ysQVRCYuVMoXCUo4N1vzJ/6EQyjLK2+1e1qxZs+v8+fPXycfGdZ/wRHRg9KDWrsulr+m7s1qdRcvJydGOGjXqJa1W2+znYDu5+ftvjP9kez///gP4jjcbE50EIsAMZqMJ8lLvzR7u37//h88+++w7cgAHa4YMHRgwIOo+2cIQqz6ZzXD90wzC1ND2PO25c+eurV27djf5WKBHoGbegBcXtnVdLn2tya+G3OPNe87i4uKKuLi4pbdv3y5t6ddHY9Ynazw6a/iONWsJRKmZCNBunbkNpgYTlN4qrZ03b9775ACqFCr1i1ELEloty5R2/KkrroPcY3mt1qDVassmTZr0T/JyB7lMLl8e89obKqVK3eZ1OfY1+2jO3WnRhoYGw7hx45a3fA8R5BUU/OGY9Zt9XX19+Y4xFyZKCUQAgElnBO0vRZC1/YZKZVI1W+OTEJ34UoC7f4AdcqqZ5R7Lg7ri5vPu9fX1hokTJ77WUl9Pj5gxq8cD4T3auhZbWrum2dAI6bvSAcwAy5KWbTl37tw1cplObp06vR/3wXofZ29vvuPLlYlSAlksa28m6HJrFZN7TZ5qCeLIriNjx3QbHW8PWdHSzAYT3Njf/Gsmzz///LqzZ8/+ST7Ww7dHz2kPPTvD+vWYY+26FenlcHXLVSg9VdpsubWX2str3WPrPvJx9vbhO65cmuhmgVrOCBEEwOhucWNVCpXa390/IGnI0petlWGcVBR9Kkkrhpq/592XLVuWvHv37hPk63g7e3uvGrnyLYVcLreFn1R8Lf7tDjwXOWNWoEfnQAAAhUyhfHvUW+s0noEavmPKtSlY3ktB4O7k5vZYyKNxY8PGxrsqXdrchsXmXhA0yud+exOcNS6mL7Z/0ew7REq5UrkmdvXajq6+7e7osbWvKrmTU9KQpFeWHk9avDBqwaKevj16sqjSYRHNfoD2SByUsFgpU1j9pWkuegAqlKQVA/wO8oVR8xf984d/vWY5/vKQpOW9OvbsRa1CRm42FaXoa1//iL6rHvnXm8ODY0Ywr82xUbDRvULCSSZXtrdumosxACX+Pm1Y0OBhod4h3W6U/ZW1IGrewrjQUXFU13azixt1X0cEDxvBaL25QJCEBLIHdCQQmVmRM2ZmlmZlTu19b6BOtT6mMPVVjEhGAlGB1a1gODiN6TokZnjXocPZVE0XLgbSYkEyEogKdpNAzcoBwURisO8BMO4AKIGaIRVZISRfbQ1KIBL2mgXiAiH56sigBCLBhwRijn1mgcQOSiASQpJAQvLVkUEJREZAsoKVBGJZXkygBCLB7qkqHAlkf18dF5RAJIQkK4TkqyOjwDtBQipZJSRfbQxKIBKmmnrI29e0JbdCX1mx/bc9O62dX11drbP8296yoiar/K6vv9/+49L32aes/gpkYWEhacMNSiALOAgm0ag3QslPTftiC6pu1ybvo/67YfYeBOtvVYP+VtM3h87+eSo7+bTj+urI4BigDZjcF77uJd16UQHdAyVQG3RQu3utGLpgCdXz3ZTOLnzdy37+vSPp+Orn6uOLcW+CuPTicbwTiGRBCYRIGpRAiKTBWSBE0qAEQiQNSiBE0qAEQiQNSiBE0qAEQiQNSiBE0qAEQiSNgiBQAiHSBXsARNLI+HYAQfgEJRAiaRRN36bEuVBEkhA4BkAkDUogRNJgD4BIGksDwHEAIjUIAJRAiMRBCYRIGvJiOJRBiFS4m/W4HBqRNC0lEPYCiNhplvK4HwCRNK1JIOwFELFy3+MeZ4EQSdOWBMJeABEbrWY6zgIhksbahhhUR4hYaDOX25sFQimECB2rGU5FAmEjQIRKuyoGZ4EQSUP1RRj2AojQoJTZdGaBsBEgQoGysKG7FAIbAeLo0MpoJmMAbASIo0I7nZm+CLNUhA0BcQQYz+WwXQ2KvQHCN6wymItpUGwECF+wTl+u1gKhJELsCWevr7jeEIMNAbElnL+3tdWbYGwICJfYbMGCrZdDY0NA2GDzlTr22hNMrgUbA2INuy5P42MxXMsqsUFIG17XY/4PGSrN/dIUlgEAAAAASUVORK5CYII=">
+  <title>雅林的小日子 🌿</title>
+  <style>
+    :root {
+      --primary:#FF8A65; --primary-light:#FFAB91; --primary-dark:#E66A4A;
+      --accent:#F48FB1; --accent-light:#FCE4EC;
+      --mint:#A5D6A7; --mint-light:#E8F5E9;
+      --sky:#81D4FA; --sky-light:#E3F2FD;
+      --lemon:#FFF59D; --lemon-light:#FFFDE7;
+      --bg:#FFF8F0; --bg-card:#FFFFFF; --bg-input:#FAF6F0; --bg-soft:#FFF0E6;
+      --text:#5D4037; --text-dim:#8D6E63; --text-light:#A1887F; --text-bright:#3E2723;
+      --success:#66BB6A; --warning:#FFB74D; --danger:#EF5350;
+      --border:rgba(141,110,99,0.12); --radius:18px; --radius-sm:12px;
+      --shadow:0 4px 20px rgba(141,110,99,0.08);
+      --safe-top:env(safe-area-inset-top,0px); --safe-bottom:env(safe-area-inset-bottom,0px);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;padding-bottom:calc(72px + var(--safe-bottom));-webkit-font-smoothing:antialiased}
+
+    .header{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,#FFE0B2,#FFCCBC,#F8BBD0);padding:calc(14px + var(--safe-top)) 20px 14px;border-radius:0 0 24px 24px}
+    .header-top{display:flex;align-items:center;justify-content:space-between}
+    .header-title{font-size:21px;font-weight:800;color:var(--text-bright)}
+    .header-title .sub{font-size:13px;font-weight:400;opacity:0.7;margin-left:6px}
+    .header-date{font-size:13px;color:var(--text-dim);margin-top:2px}
+    .header-emoji{font-size:32px}
+    .header-progress{margin-top:12px;background:rgba(255,255,255,0.5);border-radius:20px;height:8px;overflow:hidden}
+    .header-progress-bar{height:100%;background:linear-gradient(90deg,var(--mint),var(--primary));border-radius:20px;transition:width .5s ease;width:0%}
+    .header-progress-text{font-size:12px;color:var(--text-dim);margin-top:6px}
+
+    .tab-bar{display:flex;gap:6px;padding:10px 14px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:1100px;margin:0 auto}
+    .tab-bar::-webkit-scrollbar{display:none}
+    .tab-btn{flex-shrink:0;padding:9px 16px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border);color:var(--text-dim);font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap;box-shadow:var(--shadow)}
+    .tab-btn.active{background:var(--primary);color:white;border-color:var(--primary);box-shadow:0 3px 10px rgba(255,138,101,.35)}
+    .tab-btn .emoji{margin-right:4px}
+
+    .layout{display:grid;grid-template-columns:1fr;gap:0;max-width:1100px;margin:0 auto}
+    .layout-left,.layout-right{padding:14px}
+    .layout-section-label{font-size:12px;font-weight:700;color:var(--text-light);margin:10px 0 8px;display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:1px}
+    .layout-section-label::after{content:'';flex:1;height:1px;background:var(--border);margin-left:4px}
+    @media(min-width:900px){
+      .layout{grid-template-columns:340px 1fr;gap:0 8px;padding:0 12px}
+      .layout-left{position:sticky;top:calc(100px + var(--safe-top));align-self:start;max-height:calc(100vh - 110px - var(--safe-top));overflow-y:auto;scrollbar-width:thin}
+      .layout-left::-webkit-scrollbar{width:3px}.layout-left::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+    }
+
+    .main-content{padding:0}
+    .tab-panel{display:none;animation:fadeIn .4s ease}
+    .tab-panel.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+    .card{background:var(--bg-card);border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow);transition:all .3s}
+    .card-title{font-size:15px;font-weight:700;color:var(--text-bright);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .card-title .icon{font-size:17px}
+    .card-title .badge{margin-left:auto;font-size:11px;padding:3px 10px;border-radius:12px;background:var(--lemon-light);color:var(--text-dim);font-weight:600;border:1px solid var(--border)}
+
+    .task-item{display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg-soft);border-radius:var(--radius-sm);margin-bottom:6px;border:1.5px solid transparent;transition:all .3s}
+    .task-item.done{opacity:.55;border-color:var(--mint);background:var(--mint-light)}
+    .task-item.done .task-text{text-decoration:line-through;color:var(--text-light)}
+    .task-checkbox{width:24px;height:24px;border-radius:50%;border:2px solid var(--text-light);flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:13px;background:white}
+    .task-item.done .task-checkbox{background:var(--success);border-color:var(--success);color:white;transform:scale(1.05)}
+    .task-content{flex:1;min-width:0}
+    .task-text{font-size:14px;color:var(--text);word-break:break-word}
+    .task-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:8px;margin-top:3px;background:var(--accent-light);color:var(--accent);font-weight:600}
+    .task-tag.work{background:var(--sky-light);color:#0288D1}
+    .task-tag.life{background:var(--mint-light);color:#2E7D32}
+    .task-tag.study{background:var(--lemon);color:#F57F17}
+    .task-delete{width:26px;height:26px;border-radius:50%;background:rgba(239,83,80,.1);color:var(--danger);border:none;font-size:14px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .task-delete:active{transform:scale(.85)}
+
+    .add-task-row{display:flex;gap:6px;margin-top:10px}
+    .add-task-input{flex:1;padding:11px 14px;background:var(--bg-input);border:1.5px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:13px;outline:none;transition:border .2s}
+    .add-task-input::placeholder{color:var(--text-light)}
+    .add-task-input:focus{border-color:var(--primary-light)}
+    .add-task-btn{width:42px;height:42px;border-radius:var(--radius-sm);background:var(--primary);color:white;border:none;font-size:20px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .add-task-btn:active{transform:scale(.9)}
+
+    .video-card{background:var(--bg-card);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .video-thumb{width:100%;height:160px;background:linear-gradient(135deg,var(--primary-light),var(--accent));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .video-thumb-emoji{font-size:48px;opacity:.6}
+    .video-play-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--primary)}
+    .video-fit-score{position:absolute;top:10px;right:10px;background:var(--success);color:white;font-size:11px;padding:3px 10px;border-radius:12px;font-weight:700}
+    .video-info{padding:13px}
+    .video-title{font-size:14px;font-weight:700;color:var(--text-bright);margin-bottom:5px}
+    .video-meta{font-size:12px;color:var(--text-dim);display:flex;gap:10px;flex-wrap:wrap}
+    .video-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+    .video-tag{font-size:11px;padding:2px 8px;border-radius:8px;background:var(--accent-light);color:var(--accent);font-weight:600}
+    .video-recreate{margin-top:10px;padding:10px;background:var(--lemon-light);border-radius:var(--radius-sm);border-left:3px solid var(--warning)}
+    .video-recreate-label{font-size:12px;color:var(--warning);font-weight:700;margin-bottom:4px}
+    .video-recreate-text{font-size:13px;color:var(--text);line-height:1.5}
+    .video-actions{display:flex;gap:8px;margin-top:10px}
+    .video-btn{flex:1;padding:10px;border-radius:var(--radius-sm);border:none;font-size:13px;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:4px}
+    .video-btn:active{transform:scale(.96)}
+    .video-btn-play{background:var(--primary);color:white}
+    .video-btn-save{background:var(--bg-input);color:var(--text);border:1.5px solid var(--border)}
+
+    .quote-card{background:linear-gradient(135deg,var(--bg-card),var(--accent-light));border-radius:var(--radius);padding:18px;margin-bottom:10px;border-left:4px solid var(--accent);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .quote-card::before{content:'"';position:absolute;top:-10px;right:16px;font-size:72px;color:rgba(244,143,177,.15);font-family:Georgia,serif}
+    .quote-text{font-size:15px;color:var(--text-bright);line-height:1.7;font-weight:600;position:relative}
+    .quote-meta{margin-top:8px;display:flex;align-items:center;justify-content:space-between}
+    .quote-source{font-size:12px;color:var(--text-dim)}
+    .quote-category{font-size:10px;padding:3px 10px;border-radius:10px;background:white;color:var(--accent);font-weight:700}
+    .quote-copy{margin-top:10px;width:100%;padding:8px;background:rgba(255,255,255,.6);border:1px solid var(--accent);border-radius:var(--radius-sm);color:var(--accent);font-size:13px;font-weight:600;cursor:pointer}
+
+    .blogger-card{background:var(--bg-card);border-radius:var(--radius);padding:15px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .blogger-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .blogger-avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:white;flex-shrink:0}
+    .blogger-name{font-size:15px;font-weight:700;color:var(--text-bright)}
+    .blogger-desc{font-size:12px;color:var(--text-dim);margin-top:2px}
+    .blogger-content-item{padding:12px;background:var(--bg-soft);border-radius:var(--radius-sm);margin-bottom:8px}
+    .blogger-content-title{font-size:13px;font-weight:700;color:var(--text-bright);margin-bottom:4px}
+    .blogger-content-summary{font-size:12px;color:var(--text-dim);line-height:1.5}
+    .blogger-content-takeaway{font-size:12px;color:var(--success);margin-top:6px;padding:6px 10px;background:var(--mint-light);border-radius:8px;font-weight:600}
+    .blogger-link{display:inline-block;margin-top:8px;font-size:13px;color:var(--primary);text-decoration:none;font-weight:600}
+
+    .reg-card{background:var(--bg-card);border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);border-left:4px solid var(--warning);box-shadow:var(--shadow)}
+    .reg-title{font-size:14px;font-weight:700;color:var(--text-bright);margin-bottom:8px}
+    .reg-meta{font-size:12px;color:var(--text-dim);display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+    .reg-summary{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:10px}
+    .reg-points{padding-left:0;list-style:none}
+    .reg-points li{font-size:13px;color:var(--text);padding:5px 0 5px 20px;position:relative;line-height:1.5}
+    .reg-points li::before{content:'▸';position:absolute;left:4px;color:var(--warning)}
+    .reg-impact{margin-top:10px;padding:10px;background:rgba(239,83,80,.08);border-radius:8px;font-size:13px;color:var(--danger)}
+
+    .plan-phase{background:var(--bg-soft);border-radius:var(--radius-sm);padding:14px;margin-bottom:10px}
+    .plan-phase-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+    .plan-phase-name{font-size:14px;font-weight:700;color:var(--primary-dark)}
+    .plan-phase-time{font-size:12px;color:var(--text-dim)}
+    .plan-tasks{padding-left:0;list-style:none}
+    .plan-tasks li{font-size:13px;color:var(--text);padding:4px 0 4px 18px;position:relative}
+    .plan-tasks li::before{content:'○';position:absolute;left:0;color:var(--primary-light)}
+
+    .inspiration-card{background:linear-gradient(135deg,var(--bg-card),var(--sky-light));border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .inspiration-title{font-size:15px;font-weight:700;color:var(--text-bright);margin-bottom:8px}
+    .inspiration-desc{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:10px}
+    .inspiration-angle{font-size:12px;color:var(--primary-dark);padding:8px 12px;background:var(--lemon-light);border-radius:8px;margin-bottom:8px;font-weight:600}
+    .inspiration-ref{font-size:12px;color:var(--text-dim)}
+
+    .review-form{display:flex;flex-direction:column;gap:10px}
+    .review-form label{font-size:12px;color:var(--text-dim);font-weight:600}
+    .review-form input,.review-form textarea,.review-form select{width:100%;padding:11px;background:var(--bg-input);border:1.5px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:13px;outline:none;font-family:inherit}
+    .review-form textarea{min-height:70px;resize:vertical}
+    .review-form input:focus,.review-form textarea:focus,.review-form select:focus{border-color:var(--primary-light)}
+    .review-submit{padding:13px;background:var(--primary);color:white;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:700;cursor:pointer}
+    .review-submit:active{transform:scale(.97)}
+    .review-history-item{padding:13px;background:var(--bg-soft);border-radius:var(--radius-sm);margin-bottom:8px;border-left:3px solid var(--primary)}
+
+    .bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--bg-card);border-top:1px solid var(--border);padding:7px 0 calc(7px + var(--safe-bottom));z-index:100;max-width:1100px;margin:0 auto}
+    .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px;color:var(--text-dim);font-size:10px;cursor:pointer;text-decoration:none;font-weight:600}
+    .nav-item.active{color:var(--primary)}
+    .nav-item .nav-icon{font-size:20px}
+
+    .live-resource{padding:13px;background:var(--bg-soft);border-radius:var(--radius-sm);margin-bottom:8px;border-left:3px solid var(--accent)}
+    .live-resource-title{font-size:13px;font-weight:700;color:var(--text-bright);margin-bottom:5px}
+    .live-resource-content{font-size:12px;color:var(--text);line-height:1.6}
+    .live-resource-time{font-size:11px;color:var(--text-dim);margin-top:5px}
+
+    .empty-state{text-align:center;padding:30px 20px;color:var(--text-light)}
+    .empty-state .emoji{font-size:36px;margin-bottom:8px}
+
+    .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--success);color:white;padding:11px 22px;border-radius:22px;font-size:13px;z-index:1000;transition:transform .3s;white-space:nowrap;font-weight:600;box-shadow:0 4px 15px rgba(102,187,106,.4)}
+    .toast.show{transform:translateX(-50%) translateY(0)}
+
+    .water-tracker{display:flex;gap:5px;justify-content:center;margin:8px 0;flex-wrap:wrap}
+    .water-cup{width:30px;height:38px;border:2px solid var(--primary-light);border-radius:4px 4px 8px 8px;cursor:pointer;position:relative;overflow:hidden;transition:all .3s}
+    .water-cup.filled{border-color:var(--primary)}
+    .water-cup.filled::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100%;background:linear-gradient(180deg,var(--primary-light),var(--primary));animation:fillUp .5s ease}
+    @keyframes fillUp{from{height:0}to{height:100%}}
+
+    .section-title{font-size:16px;font-weight:700;color:var(--text-bright);margin:16px 0 10px;display:flex;align-items:center;gap:8px}
+    .section-title .update-time{margin-left:auto;font-size:11px;color:var(--text-dim);font-weight:400}
+
+    .filter-bar{display:flex;gap:5px;overflow-x:auto;padding:6px 0 10px;scrollbar-width:none}
+    .filter-bar::-webkit-scrollbar{display:none}
+    .filter-btn{flex-shrink:0;padding:5px 13px;border-radius:16px;background:var(--bg-card);border:1px solid var(--border);color:var(--text-dim);font-size:12px;cursor:pointer;font-weight:600}
+    .filter-btn.active{background:var(--primary);color:white;border-color:var(--primary)}
+
+    .review-history-title{font-size:13px;font-weight:700;color:var(--text-bright)}
+    .review-history-date{font-size:11px;color:var(--text-dim);margin-top:3px}
+    .review-history-detail{font-size:12px;color:var(--text);margin-top:6px;line-height:1.5}
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <div class="header-title">雅林的小日子<span class="sub">🌿 慢慢来</span></div>
+        <div class="header-date" id="todayDate"></div>
+      </div>
+      <div class="header-emoji">🐾</div>
+    </div>
+    <div class="header-progress"><div class="header-progress-bar" id="progressBar"></div></div>
+    <div class="header-progress-text" id="progressText">今天还没开始哦，打个勾吧～</div>
+  </div>
+
+  <div class="tab-bar" id="tabBar">
+    <div class="tab-btn active" data-tab="daily" onclick="switchTab('daily')"><span class="emoji">📋</span>每日任务</div>
+    <div class="tab-btn" data-tab="trending" onclick="switchTab('trending')"><span class="emoji">🔥</span>爆款视频</div>
+    <div class="tab-btn" data-tab="inspiration" onclick="switchTab('inspiration')"><span class="emoji">💡</span>灵感</div>
+    <div class="tab-btn" data-tab="quotes" onclick="switchTab('quotes')"><span class="emoji">💎</span>金句</div>
+    <div class="tab-btn" data-tab="review" onclick="switchTab('review')"><span class="emoji">📊</span>复盘</div>
+    <div class="tab-btn" data-tab="regulation" onclick="switchTab('regulation')"><span class="emoji">📜</span>助贷规范</div>
+    <div class="tab-btn" data-tab="live" onclick="switchTab('live')"><span class="emoji">🎥</span>直播</div>
+    <div class="tab-btn" data-tab="bloggers" onclick="switchTab('bloggers')"><span class="emoji">👥</span>博主</div>
+    <div class="tab-btn" data-tab="digital" onclick="switchTab('digital')"><span class="emoji">🤖</span>数字人</div>
+  </div>
+
+  <div class="main-content">
+
+    <!-- ========== 每日任务 - 左右分栏 ========== -->
+    <div class="tab-panel active" id="panel-daily">
+      <div class="layout">
+        <!-- 左栏：任务栏 -->
+        <div class="layout-left">
+          <div class="layout-section-label">📝 任务栏</div>
+
+          <div class="card">
+            <div class="card-title"><span class="icon">📋</span>每日计划<span class="badge" id="planCount">0/0</span></div>
+            <div id="taskList"></div>
+            <div class="add-task-row">
+              <input type="text" class="add-task-input" id="newTaskInput" placeholder="加个小任务..." onkeydown="if(event.key==='Enter')addTask()">
+              <button class="add-task-btn" onclick="addTask()">+</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title"><span class="icon">💧</span>每日八杯水<span class="badge" id="waterCount">0/8</span></div>
+            <div class="water-tracker" id="waterTracker"></div>
+            <div style="text-align:center;font-size:11px;color:var(--text-light)">点一下水杯就好啦</div>
+          </div>
+        </div>
+
+        <!-- 右栏：待办工作 -->
+        <div class="layout-right">
+          <div class="layout-section-label">📂 待办工作号</div>
+
+          <div class="card">
+            <div class="card-title"><span class="icon">💡</span>选题灵感速记</div>
+            <div id="quickInspirationList"></div>
+            <div class="add-task-row">
+              <input type="text" class="add-task-input" id="newInspirationInput" placeholder="闪过的灵感写下来..." onkeydown="if(event.key==='Enter')addQuickInspiration()">
+              <button class="add-task-btn" onclick="addQuickInspiration()">+</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title"><span class="icon">🔥</span>爆款热点 / 二创清单</div>
+            <div id="recreateList"></div>
+            <div class="add-task-row">
+              <input type="text" class="add-task-input" id="newRecreateInput" placeholder="记下要二创的爆款..." onkeydown="if(event.key==='Enter')addRecreate()">
+              <button class="add-task-btn" onclick="addRecreate()">+</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title"><span class="icon">📊</span>内容复盘</div>
+            <div class="review-form">
+              <div><label>发布标题</label><input type="text" id="reviewTitle" placeholder="这次发了什么？"></div>
+              <div><label>平台</label>
+                <select id="reviewPlatform">
+                  <option value="抖音">抖音</option>
+                  <option value="小红书">小红书</option>
+                  <option value="视频号">视频号</option>
+                  <option value="其他">其他</option>
+                </select>
+              </div>
+              <div><label>数据表现</label><input type="text" id="reviewData" placeholder="播放、点赞、评论..."></div>
+              <div><label>做得好的 ✅</label><textarea id="reviewGood" placeholder="哪里做得不错？"></textarea></div>
+              <div><label>可以更好的 💪</label><textarea id="reviewImprove" placeholder="哪里还能优化？"></textarea></div>
+              <div><label>下次方向 🎯</label><textarea id="reviewNext" placeholder="下次打算怎么改？"></textarea></div>
+              <button class="review-submit" onclick="saveReview()">保存复盘</button>
+            </div>
+          </div>
+
+          <div id="reviewHistoryMini"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== 爆款视频 ========== -->
+    <div class="tab-panel" id="panel-trending">
+      <div style="padding:14px">
+        <div class="section-title">🔥 今日爆款视频<span class="update-time" id="trendingUpdateTime"></span></div>
+        <div class="filter-bar" id="trendingFilter">
+          <div class="filter-btn active" onclick="filterTrending('all',this)">全部</div>
+          <div class="filter-btn" onclick="filterTrending('助贷行业',this)">助贷行业</div>
+          <div class="filter-btn" onclick="filterTrending('助贷实操',this)">助贷实操</div>
+          <div class="filter-btn" onclick="filterTrending('营销话术',this)">营销话术</div>
+          <div class="filter-btn" onclick="filterTrending('行业趋势',this)">行业趋势</div>
+          <div class="filter-btn" onclick="filterTrending('朋友圈营销',this)">朋友圈</div>
+        </div>
+        <div id="trendingVideoList"></div>
+      </div>
+    </div>
+
+    <!-- ========== 灵感 ========== -->
+    <div class="tab-panel" id="panel-inspiration">
+      <div style="padding:14px">
+        <div class="section-title">💡 选题灵感来源<span class="update-time" id="inspirationUpdateTime"></span></div>
+        <div id="inspirationList"></div>
+      </div>
+    </div>
+
+    <!-- ========== 金句 ========== -->
+    <div class="tab-panel" id="panel-quotes">
+      <div style="padding:14px">
+        <div class="section-title">💎 每日最火金句<span class="update-time" id="quotesUpdateTime"></span></div>
+        <div class="filter-bar" id="quotesFilter">
+          <div class="filter-btn active" onclick="filterQuotes('all',this)">全部</div>
+          <div class="filter-btn" onclick="filterQuotes('励志',this)">励志</div>
+          <div class="filter-btn" onclick="filterQuotes('情感',this)">情感</div>
+          <div class="filter-btn" onclick="filterQuotes('正能量',this)">正能量</div>
+          <div class="filter-btn" onclick="filterQuotes('共鸣',this)">共鸣</div>
+          <div class="filter-btn" onclick="filterQuotes('人生感悟',this)">感悟</div>
+        </div>
+        <div id="quotesList"></div>
+      </div>
+    </div>
+
+    <!-- ========== 复盘 ========== -->
+    <div class="tab-panel" id="panel-review">
+      <div style="padding:14px">
+        <div class="section-title">📊 内容复盘记录</div>
+        <div class="card">
+          <div class="card-title"><span class="icon">📝</span>新建复盘</div>
+          <div class="review-form">
+            <div><label>发布标题</label><input type="text" id="reviewTitle2" placeholder="这次发了什么？"></div>
+            <div><label>平台</label>
+              <select id="reviewPlatform2">
+                <option value="抖音">抖音</option><option value="小红书">小红书</option><option value="视频号">视频号</option><option value="其他">其他</option>
+              </select>
+            </div>
+            <div><label>数据表现</label><input type="text" id="reviewData2" placeholder="播放、点赞、评论..."></div>
+            <div><label>做得好的 ✅</label><textarea id="reviewGood2" placeholder="哪里做得不错？"></textarea></div>
+            <div><label>可以更好的 💪</label><textarea id="reviewImprove2" placeholder="哪里还能优化？"></textarea></div>
+            <div><label>下次方向 🎯</label><textarea id="reviewNext2" placeholder="下次打算怎么改？"></textarea></div>
+            <button class="review-submit" onclick="saveReview2()">保存复盘</button>
+          </div>
+        </div>
+        <div class="section-title">📂 历史复盘</div>
+        <div id="reviewHistory"></div>
+      </div>
+    </div>
+
+    <!-- ========== 助贷规范 ========== -->
+    <div class="tab-panel" id="panel-regulation">
+      <div style="padding:14px">
+        <div class="section-title">📜 助贷融资规范资料<span class="update-time" id="regUpdateTime"></span></div>
+        <div id="regulationList"></div>
+        <div class="section-title">📅 发布通知规划</div>
+        <div id="publishPlanList"></div>
+      </div>
+    </div>
+
+    <!-- ========== 直播 ========== -->
+    <div class="tab-panel" id="panel-live">
+      <div style="padding:14px">
+        <div class="section-title">🎥 直播资料（实时更新）<span class="update-time" id="liveUpdateTime"></span></div>
+        <div id="liveResourceList"></div>
+      </div>
+    </div>
+
+    <!-- ========== 博主 ========== -->
+    <div class="tab-panel" id="panel-bloggers">
+      <div style="padding:14px">
+        <div class="section-title">👥 关注博主动态<span class="update-time" id="bloggersUpdateTime"></span></div>
+        <div id="bloggersList"></div>
+      </div>
+    </div>
+
+    <!-- ========== 数字人直播 ========== -->
+    <div class="tab-panel" id="panel-digital">
+      <div style="padding:14px">
+        <div class="section-title">🤖 数字人直播方案<span class="update-time" id="digitalUpdateTime"></span></div>
+
+        <!-- 底层逻辑 -->
+        <div id="digitalTechLogic"></div>
+
+        <!-- 工具选择 -->
+        <div class="section-title">🛠️ 工具选择（捏脸/互动/推流）</div>
+        <div id="digitalTools"></div>
+
+        <!-- 助贷结合方案 -->
+        <div class="section-title">💼 助贷+数字人结合方案</div>
+        <div id="digitalAidai"></div>
+
+        <!-- 搭建步骤 -->
+        <div class="section-title">📋 从0搭建步骤</div>
+        <div id="digitalSteps"></div>
+
+        <!-- 风险提示 -->
+        <div class="section-title">⚠️ 风险与合规</div>
+        <div id="digitalRisks"></div>
+
+        <!-- 成本分析 -->
+        <div class="section-title">💰 成本分析</div>
+        <div id="digitalCost"></div>
+
+        <!-- 额外想法 -->
+        <div class="section-title">💡 你可能没想到的</div>
+        <div id="digitalIdeas"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom-nav">
+    <a class="nav-item active" onclick="switchTab('daily')"><span class="nav-icon">📋</span>任务</a>
+    <a class="nav-item" onclick="switchTab('trending')"><span class="nav-icon">🔥</span>爆款</a>
+    <a class="nav-item" onclick="switchTab('quotes')"><span class="nav-icon">💎</span>金句</a>
+    <a class="nav-item" onclick="switchTab('regulation')"><span class="nav-icon">📜</span>规范</a>
+    <a class="nav-item" onclick="switchTab('bloggers')"><span class="nav-icon">👥</span>博主</a>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    let appData={tasks:[],quickInspirations:[],recreates:[],reviews:[],waterCups:0,currentDate:''};
+    let trendingVideos=[],quotes=[],inspirations=[],regulations=[],bloggers=[],liveStreamResources=[],digitalHuman=[];
+    let currentTrendingFilter='all',currentQuotesFilter='all';
+
+    const DEFAULT_TASKS=[
+      {id:'t1',text:'遛狗 🐕',tag:'生活',tagClass:'life',done:false},
+      {id:'t2',text:'做摘抄 ✍️',tag:'学习',tagClass:'study',done:false},
+      {id:'t3',text:'9点后整理放款即将还款信息发给领导',tag:'工作',tagClass:'work',done:false},
+      {id:'t4',text:'研究动画人直播',tag:'学习',tagClass:'study',done:false},
+      {id:'t5',text:'记录员工考勤',tag:'工作',tagClass:'work',done:false}
+    ];
+
+    function getDateStr(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+    function getDateDisplay(){const d=new Date();const w=['日','一','二','三','四','五','六'][d.getDay()];return`${d.getMonth()+1}月${d.getDate()}日 星期${w}`}
+    function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)}
+    function saveData(){appData.currentDate=getDateStr();localStorage.setItem('liuyalin_workbench',JSON.stringify(appData))}
+    function loadData(){
+      const saved=localStorage.getItem('liuyalin_workbench');
+      if(saved){
+        appData=JSON.parse(saved);
+        if(appData.currentDate!==getDateStr()){
+          appData.tasks.forEach(t=>t.done=false);
+          appData.waterCups=0;
+          appData.currentDate=getDateStr();
+          if(appData.tasks.length===0)appData.tasks=JSON.parse(JSON.stringify(DEFAULT_TASKS));
+          saveData();
+        }
+      }else{
+        appData.tasks=JSON.parse(JSON.stringify(DEFAULT_TASKS));
+        appData.currentDate=getDateStr();
+        saveData();
+      }
+    }
+
+    function switchTab(tab){
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      document.getElementById('panel-'+tab).classList.add('active');
+      document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.tab===tab)b.classList.add('active');else b.classList.remove('active')});
+      const navMap={daily:0,trending:1,quotes:2,regulation:3,bloggers:4};
+      document.querySelectorAll('.bottom-nav .nav-item').forEach((n,i)=>{
+        n.classList.toggle('active',Object.keys(navMap).find(k=>navMap[k]===i)===tab);
+      });
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    function renderTasks(){
+      const list=document.getElementById('taskList');
+      if(appData.tasks.length===0){
+        list.innerHTML='<div class="empty-state"><div class="emoji">📝</div>还没任务，加一个吧</div>';
+      }else{
+        list.innerHTML=appData.tasks.map((t,i)=>`
+          <div class="task-item ${t.done?'done':''}">
+            <div class="task-checkbox" onclick="toggleTask(${i})">${t.done?'✓':''}</div>
+            <div class="task-content">
+              <div class="task-text">${escapeHtml(t.text)}</div>
+              ${t.tag?`<span class="task-tag ${t.tagClass||''}">${escapeHtml(t.tag)}</span>`:''}
+            </div>
+            <button class="task-delete" onclick="deleteTask(${i})">✕</button>
+          </div>`).join('');
+      }
+      updateProgress();
+    }
+    function toggleTask(i){appData.tasks[i].done=!appData.tasks[i].done;saveData();renderTasks()}
+    function addTask(){
+      const input=document.getElementById('newTaskInput');const text=input.value.trim();if(!text)return;
+      appData.tasks.push({id:'t'+Date.now(),text,tag:'自定义',tagClass:'',done:false});
+      input.value='';saveData();renderTasks();showToast('加好啦～');
+    }
+    function deleteTask(i){appData.tasks.splice(i,1);saveData();renderTasks();showToast('删掉了')}
+    function updateProgress(){
+      const total=appData.tasks.length;const done=appData.tasks.filter(t=>t.done).length;
+      const pct=total>0?Math.round(done/total*100):0;
+      document.getElementById('progressBar').style.width=pct+'%';
+      if(pct===0)document.getElementById('progressText').textContent='今天还没开始哦，打个勾吧～';
+      else if(pct<50)document.getElementById('progressText').textContent=`已搞定 ${done}/${total}，继续加油呀 ${pct}%`;
+      else if(pct<100)document.getElementById('progressText').textContent=`完成 ${pct}%（${done}/${total}），快过半啦！`;
+      else document.getElementById('progressText').textContent=`全部搞定！${done}/${total} 🎉 今天很棒！`;
+      document.getElementById('planCount').textContent=`${done}/${total}`;
+    }
+
+    function renderQuickInspirations(){
+      const list=document.getElementById('quickInspirationList');
+      if(appData.quickInspirations.length===0){
+        list.innerHTML='<div class="empty-state"><div class="emoji">💡</div>灵感来了就记下来</div>';
+      }else{
+        list.innerHTML=appData.quickInspirations.map((item,i)=>`
+          <div class="task-item">
+            <div class="task-content"><div class="task-text">${escapeHtml(item.text)}</div><span class="task-tag">${item.time}</span></div>
+            <button class="task-delete" onclick="deleteQuickInspiration(${i})">✕</button>
+          </div>`).join('');
+      }
+    }
+    function addQuickInspiration(){
+      const input=document.getElementById('newInspirationInput');const text=input.value.trim();if(!text)return;
+      const now=new Date();const time=`${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+      appData.quickInspirations.unshift({text,time});input.value='';saveData();renderQuickInspirations();showToast('记下啦～');
+    }
+    function deleteQuickInspiration(i){appData.quickInspirations.splice(i,1);saveData();renderQuickInspirations()}
+
+    function renderRecreates(){
+      const list=document.getElementById('recreateList');
+      if(appData.recreates.length===0){
+        list.innerHTML='<div class="empty-state"><div class="emoji">🎬</div>看到好内容就来记一笔</div>';
+      }else{
+        list.innerHTML=appData.recreates.map((item,i)=>`
+          <div class="task-item ${item.done?'done':''}">
+            <div class="task-checkbox" onclick="toggleRecreate(${i})">${item.done?'✓':''}</div>
+            <div class="task-content"><div class="task-text">${escapeHtml(item.text)}</div><span class="task-tag">${item.time}</span></div>
+            <button class="task-delete" onclick="deleteRecreate(${i})">✕</button>
+          </div>`).join('');
+      }
+    }
+    function toggleRecreate(i){appData.recreates[i].done=!appData.recreates[i].done;saveData();renderRecreates()}
+    function addRecreate(){
+      const input=document.getElementById('newRecreateInput');const text=input.value.trim();if(!text)return;
+      const now=new Date();const time=`${now.getMonth()+1}/${now.getDate()}`;
+      appData.recreates.unshift({text,time,done:false});input.value='';saveData();renderRecreates();showToast('加入二创清单～');
+    }
+    function deleteRecreate(i){appData.recreates.splice(i,1);saveData();renderRecreates()}
+
+    function renderWaterTracker(){
+      const tracker=document.getElementById('waterTracker');let html='';
+      for(let i=0;i<8;i++){html+=`<div class="water-cup ${i<appData.waterCups?'filled':''}" onclick="toggleWater(${i})"></div>`}
+      tracker.innerHTML=html;document.getElementById('waterCount').textContent=`${appData.waterCups}/8`;
+    }
+    function toggleWater(i){
+      if(i+1===appData.waterCups)appData.waterCups=i;
+      else if(i<appData.waterCups)appData.waterCups=i;
+      else{appData.waterCups=i+1;if(appData.waterCups===8)showToast('🎉 八杯水达成！今天很棒！')}
+      saveData();renderWaterTracker();
+    }
+
+    function renderTrendingVideos(){
+      const list=document.getElementById('trendingVideoList');
+      let filtered=trendingVideos;
+      if(currentTrendingFilter!=='all')filtered=trendingVideos.filter(v=>v.category===currentTrendingFilter);
+      if(filtered.length===0){list.innerHTML='<div class="empty-state"><div class="emoji">🔍</div>暂无相关视频</div>';return}
+      list.innerHTML=filtered.map(v=>`
+        <div class="video-card">
+          <div class="video-thumb" onclick="openVideo('${v.url}')">
+            <div class="video-thumb-emoji">🎬</div>
+            <div class="video-fit-score">匹配 ${v.fitScore}%</div>
+            <div class="video-play-overlay">▶</div>
+          </div>
+          <div class="video-info">
+            <div class="video-title">${escapeHtml(v.title)}</div>
+            <div class="video-meta"><span>👤 ${escapeHtml(v.author)}</span><span>❤️ ${escapeHtml(v.likes)}</span><span>📅 ${escapeHtml(v.publishTime)}</span></div>
+            <div class="video-tags">${v.tags.map(t=>`<span class="video-tag">${escapeHtml(t)}</span>`).join('')}</div>
+            <div class="video-recreate"><div class="video-recreate-label">🎬 二创建议</div><div class="video-recreate-text">${escapeHtml(v.recreateIdea)}</div></div>
+            <div class="video-actions">
+              <a href="${v.url}" target="_blank" class="video-btn video-btn-play">▶ 观看</a>
+              <button class="video-btn video-btn-save" onclick="saveToRecreate('${escapeHtml(v.title)}','${escapeHtml(v.recreateIdea)}')">加入二创</button>
+            </div>
+          </div>
+        </div>`).join('');
+    }
+    function filterTrending(cat,btn){currentTrendingFilter=cat;document.querySelectorAll('#trendingFilter .filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTrendingVideos()}
+    function saveToRecreate(title,idea){
+      const now=new Date();const time=`${now.getMonth()+1}/${now.getDate()}`;
+      appData.recreates.unshift({text:`${title} → ${idea}`,time,done:false});saveData();renderRecreates();showToast('已加入二创～');
+    }
+    function openVideo(url){window.open(url,'_blank')}
+
+    function renderQuotes(){
+      const list=document.getElementById('quotesList');let filtered=quotes;
+      if(currentQuotesFilter!=='all')filtered=quotes.filter(q=>q.category===currentQuotesFilter);
+      if(filtered.length===0){list.innerHTML='<div class="empty-state"><div class="emoji">💎</div>暂无金句</div>';return}
+      list.innerHTML=filtered.map(q=>`
+        <div class="quote-card">
+          <div class="quote-text">${escapeHtml(q.content)}</div>
+          <div class="quote-meta"><span class="quote-source">${escapeHtml(q.source)} · ❤️ ${escapeHtml(q.likes)}</span><span class="quote-category">${escapeHtml(q.category)}</span></div>
+          <button class="quote-copy" onclick="copyQuote('${escapeHtml(q.content)}')">📋 复制</button>
+        </div>`).join('');
+    }
+    function filterQuotes(cat,btn){currentQuotesFilter=cat;document.querySelectorAll('#quotesFilter .filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderQuotes()}
+    function copyQuote(text){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('复制好啦～')}catch(e){showToast('复制失败')}document.body.removeChild(ta)}
+
+    function renderInspirations(){
+      document.getElementById('inspirationList').innerHTML=inspirations.map(ins=>`
+        <div class="inspiration-card">
+          <div class="inspiration-title">${escapeHtml(ins.title)}</div>
+          <div class="inspiration-desc">${escapeHtml(ins.description)}</div>
+          <div class="inspiration-angle">📌 ${escapeHtml(ins.contentAngle)}</div>
+          <div class="inspiration-ref">参考：${escapeHtml(ins.reference)}</div>
+        </div>`).join('');
+    }
+
+    function saveReview(){
+      const title=document.getElementById('reviewTitle').value.trim();
+      if(!title){showToast('写个标题吧');return}
+      const review={id:'r'+Date.now(),title,platform:document.getElementById('reviewPlatform').value,data:document.getElementById('reviewData').value.trim(),good:document.getElementById('reviewGood').value.trim(),improve:document.getElementById('reviewImprove').value.trim(),next:document.getElementById('reviewNext').value.trim(),date:getDateStr()};
+      appData.reviews.unshift(review);saveData();renderReviews();renderReviewsMini();
+      document.getElementById('reviewTitle').value='';document.getElementById('reviewData').value='';document.getElementById('reviewGood').value='';document.getElementById('reviewImprove').value='';document.getElementById('reviewNext').value='';
+      showToast('复盘保存好啦～');
+    }
+    function saveReview2(){
+      const title=document.getElementById('reviewTitle2').value.trim();
+      if(!title){showToast('写个标题吧');return}
+      const review={id:'r'+Date.now(),title,platform:document.getElementById('reviewPlatform2').value,data:document.getElementById('reviewData2').value.trim(),good:document.getElementById('reviewGood2').value.trim(),improve:document.getElementById('reviewImprove2').value.trim(),next:document.getElementById('reviewNext2').value.trim(),date:getDateStr()};
+      appData.reviews.unshift(review);saveData();renderReviews();renderReviewsMini();
+      document.getElementById('reviewTitle2').value='';document.getElementById('reviewData2').value='';document.getElementById('reviewGood2').value='';document.getElementById('reviewImprove2').value='';document.getElementById('reviewNext2').value='';
+      showToast('复盘保存好啦～');
+    }
+    function renderReviews(){
+      const list=document.getElementById('reviewHistory');
+      if(!list)return;
+      if(appData.reviews.length===0){list.innerHTML='<div class="empty-state"><div class="emoji">📊</div>还没有复盘记录</div>';return}
+      list.innerHTML=appData.reviews.map(r=>`
+        <div class="review-history-item">
+          <div class="review-history-title">${escapeHtml(r.title)}</div>
+          <div class="review-history-date">${r.date} · ${r.platform}</div>
+          ${r.data?`<div class="review-history-detail">📊 ${escapeHtml(r.data)}</div>`:''}
+          ${r.good?`<div class="review-history-detail">✅ ${escapeHtml(r.good)}</div>`:''}
+          ${r.improve?`<div class="review-history-detail">💪 ${escapeHtml(r.improve)}</div>`:''}
+          ${r.next?`<div class="review-history-detail">🎯 ${escapeHtml(r.next)}</div>`:''}
+        </div>`).join('');
+    }
+    function renderReviewsMini(){
+      const list=document.getElementById('reviewHistoryMini');if(!list)return;
+      const recent=appData.reviews.slice(0,3);
+      if(recent.length===0){list.innerHTML='';return}
+      list.innerHTML=`<div class="section-label" style="font-size:12px;color:var(--text-light);margin:14px 0 8px;font-weight:700">最近复盘</div>`+
+        recent.map(r=>`<div class="review-history-item"><div class="review-history-title">${escapeHtml(r.title)}</div><div class="review-history-date">${r.date} · ${r.platform}</div></div>`).join('');
+    }
+
+    function renderRegulations(){
+      document.getElementById('regulationList').innerHTML=regulations.map(r=>`
+        <div class="reg-card">
+          <div class="reg-title">${escapeHtml(r.title)}</div>
+          <div class="reg-meta"><span>📄 ${escapeHtml(r.docNo)}</span><span>📅 ${escapeHtml(r.publishDate)}</span><span>🏛 ${escapeHtml(r.issuer)}</span></div>
+          <div class="reg-summary">${escapeHtml(r.summary)}</div>
+          <ul class="reg-points">${r.keyPoints.map(p=>`<li>${escapeHtml(p)}</li>`).join('')}</ul>
+          <div class="reg-impact">⚡ ${escapeHtml(r.impact)}</div>
+          ${r.url?`<a href="${r.url}" target="_blank" style="display:inline-block;margin-top:8px;font-size:12px;color:var(--primary);text-decoration:none;font-weight:600">查看原文 →</a>`:''}
+        </div>`).join('');
+      const planList=document.getElementById('publishPlanList');
+      let plans=[];
+      for(const r of regulations){if(r.publishPlan){plans=r.publishPlan;break}}
+      if(plans.length>0){
+        planList.innerHTML=plans.map(p=>`
+          <div class="plan-phase">
+            <div class="plan-phase-header"><span class="plan-phase-name">${escapeHtml(p.phase)}</span><span class="plan-phase-time">${escapeHtml(p.time)}</span></div>
+            <ul class="plan-tasks">${p.tasks.map(t=>`<li>${escapeHtml(t)}</li>`).join('')}</ul>
+          </div>`).join('');
+      }
+    }
+
+    function renderLiveResources(){
+      const list=document.getElementById('liveResourceList');
+      if(liveStreamResources.length===0){list.innerHTML='<div class="empty-state"><div class="emoji">🎥</div>暂无直播资料</div>';return}
+      list.innerHTML=liveStreamResources.map(l=>`
+        <div class="live-resource">
+          <div class="live-resource-title">${escapeHtml(l.title)}</div>
+          <div class="live-resource-content">${escapeHtml(l.content)}</div>
+          <div class="live-resource-time">更新：${escapeHtml(l.updateTime)}</div>
+        </div>`).join('');
+    }
+
+    function renderBloggers(){
+      document.getElementById('bloggersList').innerHTML=bloggers.map(b=>`
+        <div class="blogger-card">
+          <div class="blogger-header">
+            <div class="blogger-avatar">${escapeHtml(b.name.charAt(0))}</div>
+            <div style="flex:1"><div class="blogger-name">${escapeHtml(b.name)}</div><div class="blogger-desc">${escapeHtml(b.category)} · ${escapeHtml(b.description)}</div></div>
+          </div>
+          ${b.latestContent.map(c=>`
+            <div class="blogger-content-item">
+              <div class="blogger-content-title">${escapeHtml(c.title)}</div>
+              <div class="blogger-content-summary">${escapeHtml(c.summary)}</div>
+              <div class="blogger-content-takeaway">💡 ${escapeHtml(c.keyTakeaway)}</div>
+              <div style="font-size:11px;color:var(--text-dim);margin-top:4px">${escapeHtml(c.publishTime)}</div>
+            </div>`).join('')}
+          <div style="margin-top:8px;padding:8px 12px;background:var(--lemon-light);border-radius:8px;font-size:12px;color:var(--text-dim)"><b>📌 学习重点：</b>${escapeHtml(b.studyFocus)}</div>
+          <a href="${b.profileUrl}" target="_blank" class="blogger-link">查看主页 →</a>
+        </div>`).join('');
+    }
+
+    // ===== 数字人直播 =====
+    function renderDigitalHuman(){
+      if(!digitalHuman.techLogic)return;
+      const d=digitalHuman;
+
+      // 底层逻辑
+      document.getElementById('digitalTechLogic').innerHTML=d.techLogic.map(t=>`
+        <div class="card">
+          <div class="card-title"><span class="icon">🧠</span>${escapeHtml(t.title)}</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.7">${escapeHtml(t.content)}</div>
+          ${t.modules?t.modules.map(m=>`<div style="margin-top:10px;padding:10px;background:var(--bg-soft);border-radius:10px"><b style="color:var(--primary-dark);font-size:13px">${escapeHtml(m.name)}</b><div style="font-size:12px;color:var(--text-dim);margin-top:4px">${escapeHtml(m.desc)}</div></div>`).join(''):''}
+        </div>`).join('');
+
+      // 工具选择
+      document.getElementById('digitalTools').innerHTML=d.tools.map(cat=>`
+        <div class="card">
+          <div class="card-title"><span class="icon">⚙️</span>${escapeHtml(cat.category)}</div>
+          ${cat.platforms.map(p=>`
+            <div class="blogger-content-item">
+              <div style="display:flex;justify-content:space-between;align-items:start">
+                <div style="flex:1">
+                  <div class="blogger-content-title">${escapeHtml(p.name)}</div>
+                  <div class="blogger-content-summary">${escapeHtml(p.desc)}</div>
+                </div>
+                <span style="font-size:11px;color:var(--warning);font-weight:700;white-space:nowrap">${escapeHtml(p.recommend)}</span>
+              </div>
+              <div style="font-size:12px;color:var(--success);margin-top:6px;font-weight:600">💰 ${escapeHtml(p.price)}</div>
+              ${p.url?`<a href="${p.url}" target="_blank" class="blogger-link">了解详情 →</a>`:''}
+            </div>`).join('')}
+        </div>`).join('');
+
+      // 助贷结合
+      document.getElementById('digitalAidai').innerHTML=d.aidaiIntegration.map(a=>`
+        <div class="card" style="border-left:4px solid var(--primary)">
+          <div class="card-title"><span class="icon">💼</span>${escapeHtml(a.strategy)}</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.6;margin-bottom:8px">${escapeHtml(a.detail)}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="font-size:11px;padding:3px 8px;border-radius:8px;background:var(--sky-light);color:#0288D1;font-weight:600">📍 ${escapeHtml(a.platform)}</span>
+            <span style="font-size:11px;padding:3px 8px;border-radius:8px;background:${a.risk.includes('高')?'rgba(239,83,80,.1)':a.risk.includes('中')?'rgba(255,183,77,.15)':'var(--mint-light)'};color:${a.risk.includes('高')?'var(--danger)':a.risk.includes('中')?'var(--warning)':'var(--success)'};font-weight:600">风险：${escapeHtml(a.risk)}</span>
+          </div>
+        </div>`).join('');
+
+      // 搭建步骤
+      document.getElementById('digitalSteps').innerHTML=`<div class="card"><div style="display:flex;flex-direction:column;gap:0">${d.buildSteps.map(s=>`
+        <div style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">${s.step}</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:var(--text-bright)">${escapeHtml(s.title)}</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:3px">${escapeHtml(s.desc)}</div>
+            <div style="font-size:11px;color:var(--primary);margin-top:3px;font-weight:600">⏱ ${escapeHtml(s.time)}</div>
+          </div>
+        </div>`).join('')}</div></div>`;
+
+      // 风险
+      document.getElementById('digitalRisks').innerHTML=d.risks.map(r=>`
+        <div class="card" style="border-left:4px solid ${r.level.includes('高')?'var(--danger)':r.level.includes('中')?'var(--warning)':'var(--mint)'}">
+          <div style="font-size:12px;font-weight:700;margin-bottom:4px">${escapeHtml(r.level)}</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.5">${escapeHtml(r.point)}</div>
+        </div>`).join('');
+
+      // 成本
+      document.getElementById('digitalCost').innerHTML=d.costAnalysis.map(c=>`
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <span style="font-size:14px;font-weight:700;color:var(--text-bright)">${escapeHtml(c.level)}</span>
+            <span style="font-size:13px;color:var(--success);font-weight:700">${escapeHtml(c.cost)}</span>
+          </div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.5">${escapeHtml(c.detail)}</div>
+        </div>`).join('');
+
+      // 额外想法
+      document.getElementById('digitalIdeas').innerHTML=d.extraIdeas.map(i=>`
+        <div class="inspiration-card">
+          <div class="inspiration-title">${escapeHtml(i.title)}</div>
+          <div class="inspiration-desc">${escapeHtml(i.desc)}</div>
+        </div>`).join('');
+    }
+
+    function escapeHtml(str){if(typeof str!=='string')return'';return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
+
+    async function loadRemoteData(){
+      const EMBEDDED_DATA = {"trending-videos": {"updateTime": "2026-07-31 08:45", "videos": [{"id": "v17854587221", "title": "助贷新规落地后，贷款中介还能怎么赚钱？3个新机会", "author": "金融老炮儿说", "likes": "12.3w", "category": "助贷行业", "tags": ["助贷新规", "贷款中介", "行业变局"], "cover": "https://p3.douyinpic.com/img/placeholder1.jpg", "url": "https://www.douyin.com/search/助贷新规2025", "recreateIdea": "从刘雅林第一人称视角出发：'我是做助贷的，新规后我发现了3个新机会...'口播+办公室场景，结尾引导私信咨询", "fitScore": 95, "publishTime": "2026-07-31"}, {"id": "v17854587222", "title": "放款前必查的5个细节，少查一个都可能踩雷", "author": "老徐企服说", "likes": "8.7w", "category": "助贷实操", "tags": ["放款流程", "风控", "实操干货"], "cover": "https://p3.douyinpic.com/img/placeholder2.jpg", "url": "https://www.douyin.com/search/放款前必查细节", "recreateIdea": "用白板讲解形式，列出5个检查点，每个配实际案例。刘雅林可结合自身放款经验做'我在工作中踩过的坑'系列", "fitScore": 92, "publishTime": "2026-07-31"}, {"id": "v17854587223", "title": "客户说'考虑一下'怎么破？10句顶级话术", "author": "狼叔营销兵法", "likes": "15.6w", "category": "营销话术", "tags": ["客户沟通", "话术", "成交技巧"], "cover": "https://p3.douyinpic.com/img/placeholder3.jpg", "url": "https://www.douyin.com/search/客户考虑一下话术", "recreateIdea": "角色扮演形式，一人分饰两角。刘雅林可做成'助贷女中介日常'系列，用真实场景演绎话术", "fitScore": 90, "publishTime": "2026-07-31"}, {"id": "v17854587224", "title": "2026年企业融资最全渠道盘点，建议收藏", "author": "老徐企服说", "likes": "6.2w", "category": "企业融资", "tags": ["企业融资", "融资渠道", "干货合集"], "cover": "https://p3.douyinpic.com/img/placeholder4.jpg", "url": "https://www.douyin.com/search/企业融资渠道2026", "recreateIdea": "信息图表形式展示各融资渠道，配口播讲解。刘雅林可做成图文轮播+语音解读版", "fitScore": 88, "publishTime": "2026-07-31"}, {"id": "v17854587225", "title": "助贷中介转型：个人业务怎么做对公？", "author": "大威朋友圈", "likes": "9.1w", "category": "助贷转型", "tags": ["助贷转型", "对公业务", "业务升级"], "cover": "https://p3.douyinpic.com/img/placeholder5.jpg", "url": "https://www.douyin.com/search/助贷中介转型对公", "recreateIdea": "讲述自己从个人业务转对公的心路历程，用时间线展示成长轨迹。刘雅林可结合自身经历二创", "fitScore": 93, "publishTime": "2026-07-31"}, {"id": "v17854587226", "title": "银行风控到底看什么？数据比资产重要", "author": "老徐企服说", "likes": "7.8w", "category": "风控知识", "tags": ["银行风控", "数据权重", "贷款审批"], "cover": "https://p3.douyinpic.com/img/placeholder6.jpg", "url": "https://www.douyin.com/search/银行风控数据", "recreateIdea": "用天平比喻：一边放资产，一边放数据，直观展示权重关系。刘雅林可加入实际审批案例", "fitScore": 87, "publishTime": "2026-07-31"}, {"id": "v17854587227", "title": "朋友圈这样发，客户主动找你贷款", "author": "大威朋友圈", "likes": "11.2w", "category": "朋友圈营销", "tags": ["朋友圈", "获客", "私域运营"], "cover": "https://p3.douyinpic.com/img/placeholder7.jpg", "url": "https://www.douyin.com/search/朋友圈营销获客", "recreateIdea": "对比展示：错误朋友圈vs正确朋友圈，用真实截图对比。刘雅林可分享自己朋友圈模板", "fitScore": 91, "publishTime": "2026-07-31"}, {"id": "v17854587228", "title": "助贷行业的大机会在哪里？2026下半年趋势", "author": "樊振中", "likes": "18.5w", "category": "行业趋势", "tags": ["助贷趋势", "行业机会", "2026"], "cover": "https://p3.douyinpic.com/img/placeholder8.jpg", "url": "https://www.douyin.com/search/助贷行业大机会", "recreateIdea": "用数据图表展示行业趋势，配个人观点解读。刘雅林可加入自己的判断和实操计划", "fitScore": 94, "publishTime": "2026-07-31"}, {"id": "v17854587229", "title": "3.5万亿助贷行业怎么活？金融营销新规深度解读", "author": "财经头条", "likes": "5.6w", "category": "助贷行业", "tags": ["助贷新规", "金融营销", "行业转型"], "cover": "https://p3.douyinpic.com/img/placeholder9.jpg", "url": "https://www.douyin.com/search/助贷行业转型", "recreateIdea": "用问答形式解读新规对从业者的影响。刘雅林可结合自己的工作实际情况谈感受", "fitScore": 89, "publishTime": "2026-07-31"}, {"id": "v178545872210", "title": "贷款利率降到3%了？普通人怎么看待这波降息", "author": "断电成金", "likes": "8.9w", "category": "财经科普", "tags": ["降息", "贷款利率", "普通人理财"], "cover": "https://p3.douyinpic.com/img/placeholder10.jpg", "url": "https://www.douyin.com/search/贷款利率2026", "recreateIdea": "对比历史利率数据，告诉观众当前利率水平。刘雅林可做'降息后该不该转贷'科普", "fitScore": 86, "publishTime": "2026-07-31"}]}, "quotes": {"updateTime": "2026-07-31 08:45", "quotes": [{"id": "q17854587221", "content": "从0到1是勇气，从1到N是坚持。你的每一步，6000亿流量舞台都为你见证。", "source": "抖音热门", "category": "励志", "likes": "32w"}, {"id": "q17854587222", "content": "不必追逐风口，你本就是风的方向。", "source": "抖音热门", "category": "励志", "likes": "28w"}, {"id": "q17854587223", "content": "春会来，事会顺，人会好，花会开，风会暖，路会平，运会旺。", "source": "抖音热门", "category": "正能量", "likes": "45w"}, {"id": "q17854587224", "content": "2026第一课：爱别人适可而止，爱自己尽心尽力。", "source": "抖音热门", "category": "人生感悟", "likes": "38w"}, {"id": "q17854587225", "content": "和一个人在一起，如果他给你的能量是让你每天都能高高兴兴地起床，每晚都能安安心心地入睡，做每一件事都充满了动力，对未来满怀期待——那恭喜你，你没有爱错人。", "source": "抖音热门", "category": "情感", "likes": "52w"}, {"id": "q17854587226", "content": "最合适的感情，永远都不是以爱的名义互相折磨，而是彼此陪伴，成为对方的阳光。", "source": "抖音热门", "category": "情感", "likes": "41w"}, {"id": "q17854587227", "content": "如果你喜欢一个人，那你一定要学会大大方方地表达爱意。爱不是冷冰冰，爱是炙热的，永远都是。", "source": "抖音热门", "category": "情感", "likes": "36w"}, {"id": "q17854587228", "content": "我没有暧昧对象，也没有纠缠不清的人。我每天都在尽力做好自己分内的事，积极地生活，努力地工作，耐心等待你的到来。你让我等多久都可以，但是你一定要来。", "source": "抖音热门", "category": "情感", "likes": "33w"}, {"id": "q17854587229", "content": "笨蛋才会说反话，笨蛋才会把喜欢的人越推越远。", "source": "抖音热门", "category": "情感", "likes": "29w"}, {"id": "q178545872210", "content": "他并不喜欢你，只是喜欢被你喜欢。偶尔对你示好，是怕你不喜欢他了，怕突然失去被你爱慕的那种虚荣。", "source": "抖音热门", "category": "情感", "likes": "35w"}, {"id": "q178545872211", "content": "朋友圈发布，一定要有'滞后性'。真正厉害的人，从不'实时直播'人生，你看到的，永远是他们消化完情绪、沉淀好结果后，精心筛选出的那部分。", "source": "抖音·朋友圈文案", "category": "生活哲学", "likes": "22w"}, {"id": "q178545872212", "content": "赚钱的意义不是为了炫耀，而是让你在不喜欢的时候，可以说'不'。", "source": "抖音热门", "category": "励志", "likes": "39w"}, {"id": "q178545872213", "content": "成年人的世界，就是连崩溃都要选个时间，定个闹钟。", "source": "微博热搜", "category": "共鸣", "likes": "44w"}, {"id": "q178545872214", "content": "你的气质里，藏着你走过的路，读过的书，和爱过的人。", "source": "经典金句", "category": "人生感悟", "likes": "31w"}, {"id": "q178545872215", "content": "努力的意义，不在于一定会让你取得多大的成就，只是让你在平凡的日子里，活得比原来的那个自己更好一点。", "source": "抖音热门", "category": "励志", "likes": "27w"}]}, "inspirations": {"updateTime": "2026-07-31", "inspirations": [{"id": "i001", "title": "助贷新规后的'合规达人'人设", "description": "以'我在助贷行业踩过的坑'为切入点，建立专业+真实的人设。用第一人称讲述行业故事，既有专业度又有亲和力。", "contentAngle": "系列内容：每周1个真实案例（脱敏处理），从问题→分析→解决→反思的结构展开", "reference": "大威朋友圈的实战风格 + 老徐企服说的专业深度"}, {"id": "i002", "title": "'贷款女中介的一天' Vlog系列", "description": "用Vlog形式记录日常工作：整理放款信息、对接银行、客户沟通、复盘内容。让观众看到助贷行业的真实日常。", "contentAngle": "真实感+专业感的平衡，展示行业背后的努力和专业性", "reference": "狼叔营销兵法的场景化表达"}, {"id": "i003", "title": "'一分钟懂贷款'科普系列", "description": "每期1分钟讲清一个贷款知识点：什么是LPR、等额本息vs等额本金、征信报告怎么看等。短平快，易传播。", "contentAngle": "知识科普类，适合做引流爆款，每期结尾引导关注", "reference": "断电成金的通俗化表达方式"}, {"id": "i004", "title": "'放款日记'数据可视化系列", "description": "用图表形式展示每日/每周放款数据趋势（脱敏），配上行业观察。让抽象的数据变成可视化的故事。", "contentAngle": "用数据讲故事，建立专业权威感", "reference": "老徐企服说的数据驱动风格"}, {"id": "i005", "title": "'助贷姐妹花'对话系列", "description": "找一位同行姐妹，以对话形式讨论行业热点、客户案例、踩坑经验。双视角更有看点。", "contentAngle": "对话形式增加互动感，双账号互相引流", "reference": "狼叔营销兵法的角色扮演形式"}, {"id": "i006", "title": "'每日金句'图文视频系列", "description": "每天分享一条经典金句，配上助贷行业的感悟，形式简单但有共鸣感。", "contentAngle": "金句+行业感悟，文案式短视频", "reference": "断电成金的财经金句风格"}, {"id": "i007", "title": "'政策解读'专家系列", "description": "每期解读一项最新政策，用普通人能懂的语言，配上对自己工作的影响分析。", "contentAngle": "政策解读+实操影响，建立权威感", "reference": "樊振中的行业分析深度"}]}, "regulations": {"updateTime": "2026-07-31 08:45", "regulations": [{"id": "r001", "title": "《关于加强商业银行互联网助贷业务管理提升金融服务质效的通知》", "docNo": "金规〔2025〕9号", "publishDate": "2025-04-03", "effectiveDate": "2025-10-01", "issuer": "国家金融监督管理总局", "summary": "首次对'何为助贷'在规范性文件层面作出定义，明确互联网助贷属于互联网贷款，应严格遵守相关监管规章制度。", "keyPoints": ["明确助贷定义：商业银行借助外部互联网平台发放贷款的互联网助贷业务", "压实总行管理责任，明确业务主责部门，避免空心化经营", "实行名单制管理：银行总行对平台运营机构、增信服务机构实行名单制管理", "建立长期稳定合作关系，审慎核定合作费用上限", "增信服务费计入综合融资成本，利率上限实际压至24%", "禁止平台运营机构以任何形式向借款人收取息费"], "impact": "万亿级别互联网金融行业面临重大变革，'双融担'、会员卡费等模式面临合规挑战，行业加速洗牌。", "url": "https://www.gov.cn/zhengce/zhengceku/202504/content_7017135.htm"}, {"id": "r002", "title": "《小额贷款公司监督管理暂行办法》", "docNo": "金规〔2024〕8号", "publishDate": "2024-12-31", "effectiveDate": "2024-12-31", "issuer": "国家金融监督管理总局", "summary": "规范小额贷款公司经营行为，加强监督管理，促进小额贷款公司规范健康发展。", "keyPoints": ["小贷公司不得吸收公众存款", "对同一借款人的贷款余额上限规定", "加强互联网小额贷款业务管理", "规范催收行为，禁止暴力催收"], "impact": "小贷行业准入门槛提高，业务范围受限，促进行业规范发展。", "url": "https://www.nfra.gov.cn/"}, {"id": "r003", "title": "《抖音社区财经行业公约（试行）》", "docNo": "平台规范", "publishDate": "2025-12-16", "effectiveDate": "2025-12-16", "issuer": "抖音平台", "summary": "规范抖音社区内财经内容传播行为，倡导财经领域创作者完成平台财经专业资质认证。", "keyPoints": ["禁止未经认证账号发布财经专业内容", "不得使用'金融xx师''xx行长'等仿冒专业头衔", "无资质荐股、违规导流等行为将被处罚", "财经内容需完成平台财经专业资质认证"], "impact": "助贷中介在抖音内容创作需注意资质合规，个人身份直播讲产品、短视频引流等操作受限。", "url": "https://business.sohu.com/a/965802506_114984"}, {"id": "r004", "title": "史上最严金融营销新规（2026年4月发布）", "docNo": "行业新规", "publishDate": "2026-04-25", "effectiveDate": "2026-04-25", "issuer": "国家金融监督管理总局", "summary": "针对3.5万亿助贷行业的金融营销新规，进一步规范营销宣传行为，影响众多贷款居间人的直播和短视频创作。", "keyPoints": ["贷款居间人此前以个人身份在抖音、视频号开直播讲产品的操作受限", "营销宣传必须遵守国家有关网络营销管理规定", "禁止以任何形式向借款人收取息费（包括会员卡费、咨询费等）", "强化金融消费者权益保护"], "impact": "助贷中介需调整内容创作方向，从'产品推销'转向'知识科普'和'合规服务'。", "url": "https://zhuanlan.zhihu.com/p/2031399873946371635"}], "publishPlan": [{"phase": "第一阶段：合规建号", "time": "第1-2周", "tasks": ["完成抖音财经专业资质认证（如适用）", "账号定位：助贷知识分享+实操干货", "主页装修：头像、简介、背景图统一品牌形象", "确定内容调性：专业但有温度，女性视角"]}, {"phase": "第二阶段：内容储备", "time": "第3-4周", "tasks": ["储备10-15条高质量视频素材", "建立选题库：行业知识、实操干货、客户故事、政策解读", "制作3条引流爆款视频（情感共鸣型）", "制作5条专业干货视频（知识输出型）"]}, {"phase": "第三阶段：矩阵发布", "time": "第5-8周", "tasks": ["每周发布3-4条视频，保持活跃度", "黄金发布时间：12:00-13:00、18:00-19:00、21:00-22:00", "同步分发小红书、视频号", "建立私域流量池，评论区引导加微信"]}, {"phase": "第四阶段：数据优化", "time": "第9-12周", "tasks": ["复盘每条视频数据（完播率、点赞率、评论率）", "找到爆款规律，复制成功模式", "开通直播，每周至少2场", "建立客户转化SOP"]}]}, "bloggers": {"updateTime": "2026-07-31 10:50", "bloggers": [{"id": "b001", "name": "樊振中", "douyinId": "樊振中-草子学堂", "category": "助贷行业", "description": "助贷行业资深从业者，草子学堂创始人，每晚9点抖音直播，专注助贷行业趋势分析与金融居间培训", "profileUrl": "https://www.douyin.com/user/MS4wLjABAAAABqt95SMkVDysbMr1QiL2BW-EKJz1389ri3OuAPl8QU8", "latestContent": [{"title": "助贷行业的大机会在哪里？2026下半年趋势", "summary": "分析2026年下半年助贷行业的结构性机会，指出合规化是最大风口，中小助贷机构应聚焦细分领域。", "keyTakeaway": "合规化是最大机会，细分领域有蓝海", "publishTime": "2026-07-23"}, {"title": "助贷老板千万不要画饼", "summary": "提醒助贷行业管理者不要给团队画饼，要务实经营，用数据和结果说话。", "keyTakeaway": "务实经营，数据驱动管理，团队要透明", "publishTime": "2026-07-08"}, {"title": "金融居间人如何从单打独斗到团队作战", "summary": "分享助贷中介从个人经营到团队化运作的转型经验，包括组织架构设计、分工机制、利益分配方案。", "keyTakeaway": "团队化是规模化的前提，分工要清晰", "publishTime": "2026-06-20"}, {"title": "助贷新规后，哪些业务模式还能做？", "summary": "深度解读金规9号文后哪些模式合规、哪些有风险。会员卡费模式不能再做，要转向纯导流+知识服务。", "keyTakeaway": "会员卡费模式违规，转向纯导流+知识服务", "publishTime": "2026-06-05"}, {"title": "为什么每晚9点直播？金融居间的获客逻辑", "summary": "解释选择晚9点直播的原因：目标用户晚间活跃度高，且晚9点后是思考财务问题的高峰时段。", "keyTakeaway": "选对直播时间=选对用户状态，晚9点是财务思考高峰", "publishTime": "2026-05-18"}], "contentStyle": "宏观视角+行业洞察，适合学习行业趋势判断和业务模式分析", "studyFocus": "关注其对政策解读的深度和行业趋势的预判能力，学习他的直播获客时间选择逻辑"}, {"id": "b002", "name": "狼叔营销兵法", "douyinId": "狼叔｜大客户营销策划", "category": "营销话术", "description": "专注贷款中介营销话术与成交技巧，擅长客户沟通场景化教学，系列化内容规划能力强", "profileUrl": "https://www.douyin.com/user/MS4wLjABAAAAI3hgCylBwqlvw41BmVJp03vuoUDbpzffI2SYSTJwX0g", "latestContent": [{"title": "客户说'考虑一下'如何破局？10期顶级应对策略", "summary": "连续10期系列内容，针对客户说'考虑一下'这一高频场景，提供贷款女中介专用顶级应对策略。每期一个话术+一个场景演绎。", "keyTakeaway": "话术要场景化、系列化，建立自己的话术库", "publishTime": "2026-07-20"}, {"title": "优质客户总说不和中介合作，该如何应对？", "summary": "针对优质客户拒绝中介服务的情况，拆解心理原因（不信任、怕被坑），给出建立信任的5步法。", "keyTakeaway": "优质客户拒绝是因为不信任，5步建立信任感", "publishTime": "2026-03-14"}, {"title": "大客户营销策划实战心法", "summary": "分享大客户开发与维护的实战经验，强调关系经营的长期价值。大客户不是靠推销，而是靠持续的价值输出。", "keyTakeaway": "大客户靠经营不靠推销，长期关系是核心", "publishTime": "2026-07-15"}, {"title": "助贷电销话术：开场30秒决定成败", "summary": "拆解助贷电销的开场话术，前30秒的关键表达决定客户是否继续听。给出3种开场模板：痛点型、利益型、案例型。", "keyTakeaway": "电销开场30秒定胜负，准备3种模板灵活切换", "publishTime": "2026-03-10"}, {"title": "客户嫌利率高怎么办？3步化解价格异议", "summary": "针对客户嫌利率高的常见异议，给出3步化解法：第一步认可感受，第二步对比市场，第三步强调服务价值。", "keyTakeaway": "利率异议要3步化解：认可→对比→强调服务价值", "publishTime": "2026-06-28"}], "contentStyle": "场景化演绎+话术拆解，适合学习内容系列化制作和客户沟通技巧", "studyFocus": "学习其系列内容的规划能力、话术场景化表达方式和异议处理3步法"}, {"id": "b003", "name": "断电成金", "douyinId": "断电成金", "category": "财经知识", "description": "财经领域创作者，擅长把宏观金融数据翻译成普通人能懂的语言，关注利率走势与普通人理财", "profileUrl": "https://www.douyin.com/search/断电成金", "latestContent": [{"title": "2026下半年普通人最该关注的3个财务信号", "summary": "从宏观数据切入，解读普通人应该关注的财务信号：利率走势、消费趋势变化、就业数据。每个信号给出普通人该怎么应对。", "keyTakeaway": "把宏观金融数据翻译成普通人能懂的语言", "publishTime": "2026-07-25"}, {"title": "银行存款利率还会降吗？", "summary": "分析当前利率环境，预判未来利率走势，给出普通人理财建议。核心观点：利率仍有下行空间，要提前锁定收益。", "keyTakeaway": "利率解读要结合生活场景，给出可执行建议", "publishTime": "2026-07-18"}, {"title": "贷款利率降到3%了？普通人怎么看待这波降息", "summary": "对比历史利率数据，告诉观众当前利率水平。分析降息对有贷款和无贷款人群的不同影响，给出转贷建议。", "keyTakeaway": "降息对有贷人群是利好，可考虑转贷降成本", "publishTime": "2026-07-10"}, {"title": "征信报告里的5个隐藏信息，90%的人不知道", "summary": "逐条解读征信报告中容易被忽略的5个信息点：查询次数、账户状态、逾期记录保留期、授信额度使用率、担保信息。", "keyTakeaway": "征信不只是看有没有逾期，5个隐藏信息影响贷款审批", "publishTime": "2026-06-22"}, {"title": "等额本息vs等额本金，到底选哪个？3分钟讲清楚", "summary": "用具体数字对比两种还款方式的总利息差异，给出不同人群的选择建议：短期选等额本息，长期选等额本金。", "keyTakeaway": "还款方式选择要看持有期限，短期本息长期本金", "publishTime": "2026-06-08"}], "contentStyle": "宏观话题通俗化解读，适合学习如何把专业知识讲得有趣易懂", "studyFocus": "学习其将复杂金融知识简化的表达技巧和数据可视化方法"}, {"id": "b004", "name": "老徐企服说", "douyinId": "老徐企服说", "category": "企业服务", "description": "专注企业融资服务，深耕银行风控逻辑与企业融资渠道，8分钟纯干货风格", "profileUrl": "https://www.douyin.com/user/MS4wLjABAAAADkpNszMwJplaqK69LkjjLj2qwYfiXy3q0cLnH1oTGSdP0XcwkEAPacWYhrTbjdWk", "latestContent": [{"title": "为什么在银行眼中数据比资产重要？一条视频看懂风控的权重点", "summary": "深度解析银行风控的核心逻辑，用8分钟纯干货讲清楚数据在贷款审批中的权重。银行看重数据的持续性和稳定性，而非单点资产。", "keyTakeaway": "银行风控看重数据的持续性和稳定性，而非单点资产", "publishTime": "2026-07-27"}, {"title": "全网最全企业融资渠道盘点", "summary": "系统梳理企业可用的所有融资渠道：银行贷款、供应链金融、保理、融资租赁、债券、股权融资等，从准入到实操全覆盖。", "keyTakeaway": "企业融资渠道要系统化梳理，匹配企业阶段选择", "publishTime": "2026-07-22"}, {"title": "企业信用评级怎么提升？3个关键动作", "summary": "分享提升企业信用评级的方法：按时还款维护信用记录、保持合理的资产负债率、完善企业财务报表规范度。", "keyTakeaway": "企业信用=按时还款+合理负债率+规范财务报表", "publishTime": "2026-07-05"}, {"title": "中小微企业贷款被拒的5个常见原因", "summary": "总结中小微企业贷款被拒的5个高频原因：信用记录不良、财务数据不规范、经营年限不够、行业受限、担保不足。每个原因给出改善建议。", "keyTakeaway": "贷款被拒5大原因，提前排查逐一改善", "publishTime": "2026-06-15"}, {"title": "银行客户经理不会告诉你的贷款审批内幕", "summary": "从银行内部视角解读贷款审批流程，揭秘审批环节中的关键考量因素和常见误区。", "keyTakeaway": "了解银行审批内幕，才能更好地准备贷款材料", "publishTime": "2026-05-28"}], "contentStyle": "纯干货+系统化梳理，适合学习专业内容的结构化表达", "studyFocus": "学习其把复杂专业知识系统化、结构化呈现的能力和8分钟干货讲解节奏"}, {"id": "b005", "name": "大威朋友圈", "douyinId": "大威的朋友圈", "category": "助贷+朋友圈营销", "description": "助贷行业实战派，专注助贷中介转型与朋友圈私域获客，有徒弟班培训体系", "profileUrl": "https://www.douyin.com/user/MS4wLjABAAAAhgAaZAF6Cl_z5DakB8f3McDQ4iNLr_PddkhEfOuOXu4", "latestContent": [{"title": "助贷行业转型：个人业务怎么做对公？", "summary": "分享助贷中介从个人业务向对公业务转型的路径和方法，包括客户结构升级、团队能力建设、资源整合策略。", "keyTakeaway": "个人转对公要找对切入点，从服务升级开始", "publishTime": "2026-07-26"}, {"title": "朋友圈这样发，客户主动找你贷款", "summary": "拆解助贷中介朋友圈运营技巧：发布频率（每天3-5条）、内容类型（干货+案例+日常）、转化路径（引导私信咨询）。", "keyTakeaway": "朋友圈要像杂志一样经营，有价值+有温度", "publishTime": "2026-07-24"}, {"title": "12届徒弟班结业了，明天上硬活", "summary": "大威徒弟班结业分享，展示培训体系和成果。说明助贷行业培训市场的需求和商业模式。", "keyTakeaway": "助贷培训是变现方式之一，徒弟班模式可复制", "publishTime": "2026-06-11"}, {"title": "助贷中介怎么做上海和苏州市场？", "summary": "分析上海和苏州助贷市场的特点：客户质量高、竞争激烈、合规要求高。给出外地中介进入这些市场的策略建议。", "keyTakeaway": "不同城市市场特点不同，进入新市场要做差异化准备", "publishTime": "2026-07-12"}, {"title": "助贷中介的私域转化SOP", "summary": "完整拆解从获客到转化的私域SOP：第一步引流→第二步信任建立→第三步需求挖掘→第四步方案匹配→第五步成交。", "keyTakeaway": "私域转化5步SOP：引流→信任→需求→方案→成交", "publishTime": "2026-06-20"}], "contentStyle": "实战经验+可落地方法，适合学习私域获客体系和朋友圈运营", "studyFocus": "学习其朋友圈运营体系、私域转化5步SOP和徒弟班培训模式"}, {"id": "b006", "name": "胡楚靓", "douyinId": "胡楚靓", "category": "热点追踪/差异化创作", "description": "抖音获赞过亿的自媒体达人，10年长红，25岁财务自由，擅长热点追踪+自黑幽默+差异化创作", "profileUrl": "https://www.douyin.com/user/MS4wLjABAAAArEKjHBZqF5s-Gia8ctxea85CYV45L3EtISsbo_r0tSQ", "latestContent": [{"title": "热点追踪秘诀：工具是基础，差异化才是核心", "summary": "胡楚靓分享日常追踪热点的方法：每日看抖音挑战榜和音乐榜，但关键不在于追热点，而在于把热点烙上个人印记。经典案例：全网模仿舞蹈时，她以'跳得很烂'制造幽默反差。", "keyTakeaway": "1万人跳同样的舞，你凭何突围？必须让热点烙上个人印记", "publishTime": "2026-07-27"}, {"title": "连续十年踩中风口，差异化创作心法", "summary": "胡楚靓回应'连续十年踩中风口'话题，强调不是运气，而是每天花5-8小时刷短视频分析爆款逻辑，从粉丝评论中提炼需求，将热点元素与个人特色创意嫁接。", "keyTakeaway": "每天5-8小时内容浏览+分析，把热点变成自己的风格", "publishTime": "2026-07-25"}, {"title": "从'超女第一人'到抖音千万粉：我的转型之路", "summary": "回顾从2016年第一个报名超女走红，到2020年入局抖音半年吸粉300万+的经历。核心转折点：放弃一板一眼的美妆博主路线，转向素颜搞笑+反差穿搭的内容模式。", "keyTakeaway": "转型要敢于放弃已有路线，找到真正适合自己的风格", "publishTime": "2026-07-15"}, {"title": "'咆哮式化妆'是怎么想到的？反差创新法", "summary": "拆解'咆哮式化妆'的创作思路：当所有人做'沉浸式护肤'时，她反其道而行做'咆哮式'。获赞178.9万，杀入抖音热榜TOP5。核心方法：找到热门趋势的反面。", "keyTakeaway": "找热点的反面做反差，比跟风热点效果好10倍", "publishTime": "2026-07-08"}, {"title": "直播间单品卖400万+，选品逻辑是什么？", "summary": "分享直播带货选品方法：自用很多年的产品优先，粉丝关注度高的品类（如她被叫'秃头博主'所以推洗护发产品），选品周期1-3个月，直播间复购率30-40%。", "keyTakeaway": "选品要自用+粉丝关注+长期测试，复购率比转化率重要", "publishTime": "2026-06-30"}], "contentStyle": "自黑幽默+热点嫁接+个人印记，适合学习如何把热点变成自己的独特风格", "studyFocus": "学习其热点差异化加工流程：热点筛选→反差改造→创意嫁接→个人烙印；学习其每天5-8小时内容分析的习惯"}], "liveStreamResources": [{"title": "助贷直播合规指南（2026最新）", "content": "2025年12月抖音发布《社区财经行业公约》后，助贷相关直播需注意：1）完成财经专业资质认证；2）不得在直播中直接推荐具体金融产品；3）不得使用'金融xx师'等仿冒头衔；4）禁止无资质荐股和违规导流。", "updateTime": "2026-07-31"}, {"title": "助贷直播选题方向（实时更新）", "content": "推荐选题：1）政策解读类（助贷新规影响）；2）知识科普类（贷款类型科普、利率计算）；3）案例分享类（成功案例脱敏分享）；4）避坑指南类（常见骗局揭秘）；5）行业趋势类（市场分析）。", "updateTime": "2026-07-31"}, {"title": "直播话术结构模板", "content": "开场（3分钟）：自我介绍+今日话题+价值承诺 → 知识输出（15分钟）：核心干货+案例 → 互动答疑（10分钟）：解答评论区问题 → 引导关注（2分钟）：关注+私信关键词领取资料。", "updateTime": "2026-07-31"}, {"title": "黄金直播时间段", "content": "工作日：12:00-13:00（午休）、19:00-21:00（晚间黄金）、22:00-23:00（睡前）。周末：15:00-17:00（下午）、20:00-22:00（晚间）。樊振中选择晚9点，因为目标用户此时财务思考活跃。", "updateTime": "2026-07-31"}, {"title": "助贷新规下的内容创作要点", "content": "基于2025年10月生效的《助贷新规》：1）合规话术：避免承诺'百分百放款'等违规表述；2）增信透明：综合融资成本必须明示；3）身份合规：避免使用'行长''金融师'等头衔；4）拒绝诱导：禁止以会员卡、咨询费等名义变相收费。", "updateTime": "2026-07-31"}, {"title": "直播间互动设计技巧", "content": "1）设置关键词触发：观众发'利率'自动回复利率科普；2）答题抽奖：每15分钟抽一次答对问题的观众送资料包；3）引导弹幕：设计选择题让观众刷ABCD增加互动率；4）连麦设计：提前安排客户连麦分享成功案例（脱敏）。", "updateTime": "2026-07-31"}, {"title": "数字人直播+真人混合排班建议", "content": "黄金时段（19:00-22:00）真人直播，建立信任和深度互动；非黄金时段用数字人值守，循环播放知识科普+引导关注。既保证互动质量，又实现24小时不断播获客，人效最大化。", "updateTime": "2026-07-31"}]}, "digital-human": {"updateTime": "2026-07-31 09:13", "techLogic": [{"title": "数字人直播的底层逻辑（一图看懂）", "content": "数字人直播 = 虚拟形象 + AI语音合成 + 实时驱动 + 直播推流 + 互动问答。整条技术链路是：①捏脸生成虚拟形象 → ②文本/语音输入 → ③AI将文本转成带情感的语音（TTS）→ ④语音驱动虚拟形象的嘴型、表情、动作（唇形同步）→ ⑤通过OBS等工具推流到直播平台 → ⑥AI实时读取评论区问题，生成回答，循环②-④"}, {"title": "核心模块拆解", "modules": [{"name": "虚拟形象层", "desc": "3D/2D数字人模型，包括脸型、发型、服装、配饰，通过捏脸工具或照片生成"}, {"name": "语音合成层（TTS）", "desc": "将文字转成自然语音，支持情感、语速、音色调节。代表：ChatTTS、阿里CosyVoice、微软Azure TTS"}, {"name": "唇形驱动层", "desc": "实时分析语音，驱动数字人嘴型与语音同步。代表：MetaHuman Animator、Wav2Lip、SadTalker"}, {"name": "AI互动层", "desc": "读取直播间弹幕，用大模型（如GPT/文心一言）理解问题并生成回答，再交给TTS播报"}, {"name": "推流层", "desc": "将数字人画面+语音合成直播流推送到抖音/视频号等平台。代表：OBS、直播伴侣"}]}], "tools": [{"category": "捏脸/虚拟形象制作", "platforms": [{"name": "腾讯智影", "desc": "腾讯官方数字人平台，提供大量预制形象+自定义捏脸，支持照片生成数字分身", "price": "免费试用，正式版约200-500元/月", "recommend": "★★★★★", "url": "https://zenvideo.qq.com"}, {"name": "硅基智能", "desc": "国内最早做数字人直播的公司，克隆形象+声音只需几分钟，直播话术库丰富", "price": "约2000-5000元/年", "recommend": "★★★★★", "url": "https://www.guiji-ai.com"}, {"name": "魔珐科技", "desc": "3D超写实数字人，支持全身动作驱动，适合高质量直播场景", "price": "企业级定价，需联系销售", "recommend": "★★★★", "url": "https://www.mofa-tech.com"}, {"name": "剪映数字人", "desc": "免费门槛最低，剪映APP内直接使用，适合新手入门测试", "price": "免费/会员版", "recommend": "★★★★", "url": "https://www.capcut.cn"}, {"name": "科大讯飞虚拟人", "desc": "语音技术最强，数字人口播自然度高，支持多方言", "price": "按需付费", "recommend": "★★★★", "url": "https://virtual-man.xfyun.cn"}]}, {"category": "实时互动问答", "platforms": [{"name": "智狐AI", "desc": "2026年横评第一，全链路超写实+实时互动，支持弹幕自动回复", "price": "约300-800元/月", "recommend": "★★★★★", "url": "https://www.zhihu-ai.com"}, {"name": "百度慧播星", "desc": "百度官方，内置话术库+AI交互，支持关键词触发自动回复", "price": "免费试用+付费版", "recommend": "★★★★", "url": "https://huiboxing.baidu.com"}, {"name": "萤瓴AI", "desc": "支持双端开播（手机+电脑），弹幕实时互动，风控能力强", "price": "约500元/月起", "recommend": "★★★★", "url": "https://www.ylingai.com"}, {"name": "OBS+ChatTTS自建", "desc": "开源方案：OBS推流+ChatTTS语音+大模型回答弹幕，成本最低但需技术能力", "price": "免费（需自己搭建）", "recommend": "★★★", "url": "https://obsproject.com"}]}, {"category": "推流工具", "platforms": [{"name": "OBS Studio", "desc": "开源免费，行业标准，支持多场景切换、虚拟摄像头、音频混合", "price": "免费", "recommend": "★★★★★", "url": "https://obsproject.com"}, {"name": "抖音直播伴侣", "desc": "抖音官方推流工具，直接对接抖音直播间，操作简单", "price": "免费", "recommend": "★★★★★", "url": "https://www.douyin.com"}, {"name": "视频号直播工具", "desc": "微信视频号官方，支持虚拟背景+数字人画面", "price": "免费", "recommend": "★★★★", "url": "https://channels.weixin.qq.com"}]}], "aidaiIntegration": [{"title": "助贷+数字人直播结合方案", "strategy": "知识科普型直播", "detail": "数字人主播每天定时直播讲贷款知识：LPR是什么、等额本息vs等额本金、征信报告怎么看、助贷新规解读。直播间挂小风车引流到私信咨询。注意：不能在直播中直接推荐具体贷款产品，以知识科普为主。", "platform": "抖音/视频号", "risk": "低"}, {"title": "助贷+数字人直播结合方案", "strategy": "问答互动型直播", "detail": "数字人实时回答评论区问题。提前建好FAQ话术库（利率、流程、条件等），AI匹配弹幕关键词自动回答。复杂问题引导私信。适合长时间挂机直播获客。", "platform": "抖音/快手", "risk": "中（需注意话术合规）"}, {"title": "助贷+数字人直播结合方案", "strategy": "案例分享型直播", "detail": "数字人讲述脱敏后的成功案例（如'今天帮一位客户从36%利率转到24%'），用故事化表达吸引观众。配合数据可视化画面增强可信度。", "platform": "抖音/小红书", "risk": "中（案例必须脱敏）"}, {"title": "助贷+数字人直播结合方案", "strategy": "24小时获客型直播", "detail": "数字人循环播放贷款知识+引导关注，夜间也不断播。直播间设置关键词触发：发'利率'自动回复当前利率表，发'咨询'引导加微信。核心是低成本获客。", "platform": "视频号/快手", "risk": "高（需频繁换话术防风控）"}], "buildSteps": [{"step": 1, "title": "选择平台", "desc": "新手推荐腾讯智影或剪映数字人入门，预算充足选硅基智能", "time": "1天"}, {"step": 2, "title": "捏脸制作形象", "desc": "用平台捏脸工具定制你的数字人形象，或上传照片生成数字分身。建议形象专业但有亲和力", "time": "1-2天"}, {"step": 3, "title": "录制声音克隆", "desc": "录5-10分钟自己的声音素材，用平台克隆音色。这样数字人用的是你的声音，更有个人IP感", "time": "半天"}, {"step": 4, "title": "搭建话术库", "desc": "整理助贷FAQ话术：利率问题、流程问题、条件问题、常见误区等，每条30-60秒话术", "time": "2-3天"}, {"step": 5, "title": "配置互动规则", "desc": "设置关键词触发回复：'利率'→回复利率表，'征信'→回复征信科普，'咨询'→引导私信", "time": "1天"}, {"step": 6, "title": "OBS推流测试", "desc": "用OBS或直播伴侣测试推流，检查画面、声音、互动是否正常", "time": "半天"}, {"step": 7, "title": "正式开播", "desc": "先试播1-2小时观察效果，关注完播率、互动率、风控情况，逐步优化", "time": "持续"}], "risks": [{"level": "🔴 高风险", "point": "抖音对数字人直播有严格风控，新号直接开播容易被限流。建议先用真人直播养号7-15天，再切换数字人"}, {"level": "🔴 高风险", "point": "助贷内容不能直接推荐产品、不能承诺放款、不能收前期费用。数字人话术必须经过合规审核"}, {"level": "🟡 中风险", "point": "数字人互动延迟过高（>3秒）会被平台判定低质直播。需选择延迟低的平台或优化网络"}, {"level": "🟡 中风险", "point": "长时间循环播放相同话术会被风控。建议每2小时更新一次话术内容"}, {"level": "🟢 建议", "point": "视频号对数字人相对友好，建议从视频号起步，同步抖音"}, {"level": "🟢 建议", "point": "数字人+真人混合模式效果最好：黄金时段真人直播，非黄金时段数字人值守"}], "costAnalysis": [{"level": "入门级", "cost": "0-500元/月", "detail": "剪映数字人（免费）+ OBS（免费）+ 直播伴侣（免费），适合测试验证"}, {"level": "标准级", "cost": "500-2000元/月", "detail": "腾讯智影/智狐AI + 声音克隆 + 话术库搭建，适合正式运营"}, {"level": "专业级", "cost": "2000-5000元/月", "detail": "硅基智能定制形象+声音+互动系统，适合规模化获客"}], "extraIdeas": [{"title": "💡 你可能没想到的：数字人分身矩阵", "desc": "克隆多个数字人形象，不同平台用不同人设：抖音用专业顾问形象，视频号用亲切闺蜜形象，快手用接地气形象。同一套话术库，多平台同时开播"}, {"title": "💡 你可能没想到的：数字人+私域联动", "desc": "直播间数字人引导加微信后，私域用真人跟进。数字人负责24小时获客引流，真人负责成交转化，人效最大化"}, {"title": "💡 你可能没想到的：话术A/B测试", "desc": "同一时段开两个数字人直播间，用不同话术，看哪个获客效率高。快速找到最优话术模板"}, {"title": "💡 你可能没想到的：数字人讲爆款视频", "desc": "把工作台里的爆款视频文案，直接让数字人播报出来录成短视频。相当于自动二创，批量产出内容"}, {"title": "💡 你可能没想到的：合规红线要提前排", "desc": "助贷行业直播合规要求比普通行业严。建议在话术库里设置'敏感词过滤'，数字人自动跳过'包过''百分百下款'等违规词"}, {"title": "💡 你可能没想到的：数字人也可以做复盘", "desc": "每次直播后，用AI分析直播间弹幕数据，自动生成复盘报告：哪些问题被问最多、哪个时段互动最高、哪些话术转化最好"}]}};
+      const vData=EMBEDDED_DATA['trending-videos'];
+      const qData=EMBEDDED_DATA['quotes'];
+      const iData=EMBEDDED_DATA['inspirations'];
+      const rData=EMBEDDED_DATA['regulations'];
+      const bData=EMBEDDED_DATA['bloggers'];
+      const dhData=EMBEDDED_DATA['digital-human'];
+      if(vData){trendingVideos=vData.videos||[];document.getElementById('trendingUpdateTime').textContent=vData.updateTime||''}
+      if(qData){quotes=qData.quotes||[];document.getElementById('quotesUpdateTime').textContent=qData.updateTime||''}
+      if(iData){inspirations=iData.inspirations||[];document.getElementById('inspirationUpdateTime').textContent=iData.updateTime||''}
+      if(rData){regulations=rData.regulations||[];if(rData.publishPlan)regulations.push({publishPlan:rData.publishPlan});document.getElementById('regUpdateTime').textContent=rData.updateTime||''}
+      if(bData){bloggers=bData.bloggers||[];liveStreamResources=bData.liveStreamResources||[];document.getElementById('liveUpdateTime').textContent=bData.updateTime||'';document.getElementById('bloggersUpdateTime').textContent=bData.updateTime||''}
+      if(dhData){digitalHuman=dhData;document.getElementById('digitalUpdateTime').textContent=dhData.updateTime||''}
+      renderTrendingVideos();renderQuotes();renderInspirations();renderRegulations();renderLiveResources();renderBloggers();renderDigitalHuman();
+    }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault();deferredPrompt=e});
+
+    function init(){
+      document.getElementById('todayDate').textContent=getDateDisplay();
+      loadData();renderTasks();renderQuickInspirations();renderRecreates();renderWaterTracker();renderReviews();renderReviewsMini();
+      loadRemoteData();
+    }
+    
+    init();
+  </script>
+</body>
+</html>
