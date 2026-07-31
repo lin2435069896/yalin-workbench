@@ -1,0 +1,53 @@
+{
+  "name": "雅林的小日子",
+  "short_name": "雅林日子",
+  "description": "雅林的每日小日子 - 轻松管理任务、灵感、爆款、复盘、金句、助贷规范、直播资料、博主跟踪",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8F0",
+  "theme_color": "#FFE0B2",
+  "lang": "zh-CN",
+  "categories": ["productivity", "business"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "每日任务",
+      "short_name": "任务",
+      "url": "./index.html",
+      "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "爆款视频",
+      "short_name": "爆款",
+      "url": "./index.html",
+      "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "每日金句",
+      "short_name": "金句",
+      "url": "./index.html",
+      "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]
+    }
+  ]
+}
