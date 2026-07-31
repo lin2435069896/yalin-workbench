@@ -1,5 +1,14 @@
 {
   "updateTime": "2026-07-31 09:13",
+  "sectionTimeRanges": {
+    "techLogic": "half_year",
+    "tools": "half_month",
+    "aidaiIntegration": "one_month",
+    "buildSteps": "half_month",
+    "risks": "half_month",
+    "costAnalysis": "one_month",
+    "extraIdeas": "half_month"
+  },
   "techLogic": [
     {
       "title": "数字人直播的底层逻辑（一图看懂）",
