@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-07-31 15:10",
+  "updateTime": "2026-08-01 14:00",
   "platforms": [
     {
       "platform": "抖音",
@@ -7,6 +7,26 @@
       "color": "#000000",
       "bgColor": "rgba(0,0,0,0.05)",
       "hotspots": [
+        {
+          "title": "8月1日个贷新规来了！你的贷款要变贵吗？",
+          "author": "财经头条",
+          "likes": "35.2w",
+          "category": "个贷新规",
+          "publishTime": "2026-08-01",
+          "timeRange": "half_month",
+          "hotAngle": "8月1日施行+影响每个人+价格变化悬念，三重引爆点",
+          "recreateIdea": "做'助贷女中介解读个贷新规'，用白话解释明示表对借款人的好处"
+        },
+        {
+          "title": "助贷中介的'最后窗口期'话术，别被骗了",
+          "author": "金融打假",
+          "likes": "28.5w",
+          "category": "行业打假",
+          "publishTime": "2026-07-31",
+          "timeRange": "half_month",
+          "hotAngle": "打假类内容+中介话术揭秘，情绪共鸣强",
+          "recreateIdea": "从助贷内部人角度：'我们行业里有些人在用新规吓客户，真相是...'"
+        },
         {
           "title": "月薪3000如何理财？3步搞定个人财务规划",
           "author": "理财小课堂",
@@ -96,6 +116,16 @@
       "bgColor": "rgba(255,36,66,0.06)",
       "hotspots": [
         {
+          "title": "8月1日起贷款必须看这张表！综合融资成本明示表长啥样",
+          "author": "金融小百科",
+          "likes": "15.6w",
+          "category": "个贷新规",
+          "publishTime": "2026-08-01",
+          "timeRange": "half_month",
+          "hotAngle": "图文解读+实物展示，小红书用户偏好干货科普",
+          "recreateIdea": "做图文版'综合融资成本明示表长啥样'，手把手教看表"
+        },
+        {
           "title": "女生搞钱必看｜5个副业每月多赚3000+",
           "author": "搞钱女孩",
           "likes": "12.6w",
@@ -164,6 +194,16 @@
       "bgColor": "rgba(7,193,96,0.06)",
       "hotspots": [
         {
+          "title": "助货行业大洗牌！8月1日后中介怎么活？",
+          "author": "樊振中",
+          "likes": "32.4w",
+          "category": "助贷新规",
+          "publishTime": "2026-07-31",
+          "timeRange": "half_month",
+          "hotAngle": "行业洗牌+从业者视角，视频号用户偏行业人",
+          "recreateIdea": "做'新规后我的调整方案'，展示从信息差到咨询服务的转型"
+        },
+        {
           "title": "2026年普通人最大的机会：私域+内容",
           "author": "商业老炮",
           "likes": "18.5w",
@@ -231,6 +271,16 @@
       "color": "#00A1D6",
       "bgColor": "rgba(0,161,214,0.06)",
       "hotspots": [
+        {
+          "title": "深度解析｜个贷新规8月1日施行，3.5万亿助贷行业终局",
+          "author": "财经阿伟",
+          "likes": "42.3w",
+          "category": "行业分析",
+          "publishTime": "2026-08-01",
+          "timeRange": "half_month",
+          "hotAngle": "B站偏好深度内容+终局叙事+3.5万亿数字",
+          "recreateIdea": "做'个贷新规对助贷行业的终极影响'20分钟深度解读"
+        },
         {
           "title": "深度解析｜3.5万亿助贷行业怎么赚钱",
           "author": "财经阿伟",
