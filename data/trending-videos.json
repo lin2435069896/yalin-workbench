@@ -1,6 +1,78 @@
 {
-  "updateTime": "2026-07-31 08:45",
+  "updateTime": "2026-08-01 14:00",
   "videos": [
+    {
+      "id": "v2026080101",
+      "title": "8月1日个贷新规施行！助贷中介以后怎么收费？",
+      "author": "金融老炮儿说",
+      "likes": "25.6w",
+      "category": "助贷行业",
+      "tags": [
+        "个贷新规",
+        "综合融资成本",
+        "助贷收费"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/个贷新规8月1日",
+      "recreateIdea": "从刘雅林视角：'今天新规施行，我们助贷中介的收费模式变了...'结合实际工作谈影响",
+      "fitScore": 98,
+      "publishTime": "2026-08-01",
+      "timeRange": "half_month"
+    },
+    {
+      "id": "v2026080102",
+      "title": "贷款中介说'8月1日后审批更严'？真相来了",
+      "author": "老徐企服说",
+      "likes": "18.3w",
+      "category": "助贷行业",
+      "tags": [
+        "个贷新规",
+        "中介炒作",
+        "窗口期"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/助贷中介窗口期",
+      "recreateIdea": "辟谣类内容：'中介说8月1日后审批更严是假的，真相是...'用事实拆解中介话术",
+      "fitScore": 95,
+      "publishTime": "2026-08-01",
+      "timeRange": "half_month"
+    },
+    {
+      "id": "v2026080103",
+      "title": "银行公布贷款成本上限！18%年化意味着什么？",
+      "author": "断电成金",
+      "likes": "22.7w",
+      "category": "财经科普",
+      "tags": [
+        "综合融资成本",
+        "利率",
+        "银行"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/银行综合融资成本上限",
+      "recreateIdea": "用数字对比：18%年化到底贵不贵？之前隐性收费有多少？用图表展示真实成本",
+      "fitScore": 92,
+      "publishTime": "2026-08-01",
+      "timeRange": "half_month"
+    },
+    {
+      "id": "v2026080104",
+      "title": "数字人直播被封号？2026最新合规要求全解读",
+      "author": "财经观察",
+      "likes": "16.8w",
+      "category": "行业趋势",
+      "tags": [
+        "数字人直播",
+        "合规",
+        "直播电商监管"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/数字人直播合规2026",
+      "recreateIdea": "从助贷角度：'数字人直播助贷内容怎么合规？'梳理6项备案+4件开播必做",
+      "fitScore": 90,
+      "publishTime": "2026-07-30",
+      "timeRange": "half_month"
+    },
     {
       "id": "v17854587221",
       "title": "助贷新规落地后，贷款中介还能怎么赚钱？3个新机会",
