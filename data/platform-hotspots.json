@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-08-01 14:00",
+  "updateTime": "2026-08-03 12:00",
   "platforms": [
     {
       "platform": "抖音",
@@ -7,6 +7,26 @@
       "color": "#000000",
       "bgColor": "rgba(0,0,0,0.05)",
       "hotspots": [
+        {
+          "title": "四大行贷款上限6%！你的贷款贵了吗？",
+          "author": "财经头条",
+          "likes": "42.5w",
+          "category": "银行利率",
+          "publishTime": "2026-08-03",
+          "timeRange": "half_month",
+          "hotAngle": "6%数字冲击力+每个人相关+对比悬念",
+          "recreateIdea": "做'你的贷款利率 vs 四大行上限'对比，帮观众算账"
+        },
+        {
+          "title": "助贷新规3天日记：行业真实变化记录",
+          "author": "助贷阿强",
+          "likes": "25.6w",
+          "category": "行业日记",
+          "publishTime": "2026-08-02",
+          "timeRange": "half_month",
+          "hotAngle": "日记体+真实记录+时效性强",
+          "recreateIdea": "做'助贷女中介新规日记'系列，每天记录行业变化"
+        },
         {
           "title": "8月1日个贷新规来了！你的贷款要变贵吗？",
           "author": "财经头条",
@@ -116,6 +136,16 @@
       "bgColor": "rgba(255,36,66,0.06)",
       "hotspots": [
         {
+          "title": "贷款必看！六大行利率上限对比表，收藏备用",
+          "author": "金融小百科",
+          "likes": "18.7w",
+          "category": "银行利率",
+          "publishTime": "2026-08-03",
+          "timeRange": "half_month",
+          "hotAngle": "对比表+收藏价值+实用工具",
+          "recreateIdea": "做图文版'六大行利率上限对比表'，小红书收藏率高"
+        },
+        {
           "title": "8月1日起贷款必须看这张表！综合融资成本明示表长啥样",
           "author": "金融小百科",
           "likes": "15.6w",
@@ -194,6 +224,16 @@
       "bgColor": "rgba(7,193,96,0.06)",
       "hotspots": [
         {
+          "title": "央行下半年会议释放信号，助贷行业下半年怎么走？",
+          "author": "财经观察",
+          "likes": "22.3w",
+          "category": "政策解读",
+          "publishTime": "2026-08-02",
+          "timeRange": "half_month",
+          "hotAngle": "央行会议+政策信号+行业走向",
+          "recreateIdea": "从助贷角度解读央行会议精神：合规是主旋律"
+        },
+        {
           "title": "助货行业大洗牌！8月1日后中介怎么活？",
           "author": "樊振中",
           "likes": "32.4w",
@@ -271,6 +311,16 @@
       "color": "#00A1D6",
       "bgColor": "rgba(0,161,214,0.06)",
       "hotspots": [
+        {
+          "title": "深度对比｜六大行vs股份行vs城商行贷款成本上限",
+          "author": "财经阿伟",
+          "likes": "35.8w",
+          "category": "深度分析",
+          "publishTime": "2026-08-03",
+          "timeRange": "half_month",
+          "hotAngle": "B站偏好深度对比+多维度分析",
+          "recreateIdea": "做20分钟深度视频，横向对比各类银行成本上限"
+        },
         {
           "title": "深度解析｜个贷新规8月1日施行，3.5万亿助贷行业终局",
           "author": "财经阿伟",
