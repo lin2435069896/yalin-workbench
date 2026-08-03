@@ -1,6 +1,60 @@
 {
-  "updateTime": "2026-08-01 14:00",
+  "updateTime": "2026-08-03 12:00",
   "videos": [
+    {
+      "id": "v2026080301",
+      "title": "六大行贷款利率上限公布！4大行6%交行邮储12%，差距怎么这么大？",
+      "author": "断电成金",
+      "likes": "32.5w",
+      "category": "财经科普",
+      "tags": [
+        "六大行",
+        "融资成本上限",
+        "利率对比"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/六大行融资成本上限",
+      "recreateIdea": "从刘雅林视角：'同样是银行贷款，四大行6%交行邮储12%，差了一倍...'用对比表展示差异",
+      "fitScore": 98,
+      "publishTime": "2026-08-03",
+      "timeRange": "half_month"
+    },
+    {
+      "id": "v2026080302",
+      "title": "招商中信互联网贷款24%上限！助贷中介还有多少利润空间？",
+      "author": "金融老炮儿说",
+      "likes": "26.8w",
+      "category": "助贷行业",
+      "tags": [
+        "股份行",
+        "互联网贷款",
+        "助贷利润"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/招商中信互联网贷款上限",
+      "recreateIdea": "算账类内容：24%上限减去银行资金成本，助贷中介还能收多少服务费？用数字说话",
+      "fitScore": 96,
+      "publishTime": "2026-08-03",
+      "timeRange": "half_month"
+    },
+    {
+      "id": "v2026080303",
+      "title": "个贷新规落地3天，助贷行业发生了什么变化？",
+      "author": "樊振中",
+      "likes": "28.3w",
+      "category": "助贷行业",
+      "tags": [
+        "个贷新规",
+        "行业变化",
+        "落地效果"
+      ],
+      "cover": "",
+      "url": "https://www.douyin.com/search/个贷新规落地变化",
+      "recreateIdea": "从从业者视角：'新规落地3天，我们公司的收费模式调整了...'讲真实变化",
+      "fitScore": 95,
+      "publishTime": "2026-08-02",
+      "timeRange": "half_month"
+    },
     {
       "id": "v2026080101",
       "title": "8月1日个贷新规施行！助贷中介以后怎么收费？",
